@@ -19,7 +19,7 @@ const appointments = {
 
 export default function UserAppointment() {
   return (
-    
+    <div className=" mt-24 ">
     <div className="p-6 grid grid-cols-1 md:grid-cols-2 gap-6 ">
       <section>
         <Card>
@@ -64,6 +64,7 @@ export default function UserAppointment() {
           </CardContent>
         </Card>
       </section>
+    </div>
     </div>
   );
 }

@@ -9,6 +9,7 @@ import UserReshedule from "@/pages/dashboard/UserReshedule";
 import UserTrack from "@/pages/dashboard/UserTrack";
 import UserAppointment from "@/pages/dashboard/UserAppointment";
 import ComplaintForm from "@/pages/ComplaintForm";
+import AdminHome from "@/pages/AdminPanel/AdminHome";
 
 export const router = createBrowserRouter([
   {
@@ -20,7 +21,7 @@ export const router = createBrowserRouter([
       {path:"complaint", element:<ComplaintForm/>},
     ],
   },
-  { path: "login", element: <Login /> },
+  { path: "login", element: <Login /> },{path:"admin",element:<AdminHome/>},
   { path: "dashboard", element: <DashboardHome /> ,children:[
     {path:"service", element:<UserServices/>},
     {path:"reshedule", element:<UserReshedule/>},

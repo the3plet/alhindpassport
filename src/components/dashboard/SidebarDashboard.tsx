@@ -10,6 +10,8 @@ import {
     LogOut,
     Settings2,
     TimerReset,
+    TowerControl,
+    User2,
     UserCircle2,
     Workflow,
   } from "lucide-react";
@@ -38,9 +40,9 @@ import { DropdownMenu, DropdownMenuTrigger } from "../ui/dropdown-menu";
   // Menu items.
   const items = [
     {
-      title: "Home",
+      title: "User",
       url: "/admin/dashboard",
-      icon: Home,
+      icon: User2,
       edit: [
         {
           title: "Appointments",
@@ -64,28 +66,28 @@ import { DropdownMenu, DropdownMenuTrigger } from "../ui/dropdown-menu";
         },
       ], // no sub-items for this one
     },
-    // {
-    //   title: "Pages",
-    //   url: "/admin/edit",
-    //   icon: Settings2,
-    //   edit: [
-    //     {
-    //       title: "Banner",
-    //       url: "/admin/edit/banner", // specific URL for Banner
-    //       icon: GalleryThumbnails,
-    //     },
-    //     {
-    //       title: "Currency",
-    //       url: "/admin/edit/currency", // specific URL for Currency
-    //       icon: IndianRupee,
-    //     },
-    //     {
-    //       title: "Notification",
-    //       url: "/admin/edit/notification", // specific URL for Notification
-    //       icon: Bell,
-    //     },
-    //   ],
-    // },
+    {
+      title: "Admin",
+      url: "/admin/edit",
+      icon: TowerControl,
+      edit: [
+        {
+          title: "Banner",
+          url: "/admin/edit/banner", // specific URL for Banner
+          icon: GalleryThumbnails,
+        },
+        {
+          title: "Currency",
+          url: "/admin/edit/currency", // specific URL for Currency
+          icon: IndianRupee,
+        },
+        {
+          title: "Notification",
+          url: "/admin/edit/notification", // specific URL for Notification
+          icon: Bell,
+        },
+      ],
+    },
   ];
   export function SidebarDashboard() {
     const [selectedTab, setSelectedTab] = useState<string>("/admin/dashboard");
