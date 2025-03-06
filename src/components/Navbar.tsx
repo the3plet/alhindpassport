@@ -27,10 +27,13 @@ export default function Navbar() {
               Login
             </button>
             </Link>
+            <a href='/admin'>
+
             <button className="bg-green-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-green-700 flex items-center gap-2">
               <User size={18} />
-              Register
+              Admin
             </button>
+            </a>
           </div>
           
           <div className="md:hidden">
