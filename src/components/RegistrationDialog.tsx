@@ -115,7 +115,7 @@ const RegistrationDialog = () => {
             <Input
               type="number"
               className="w-full"
-              placeholder="Enter UAE number"
+              placeholder="Enter contact number"
             />
           </div>
 
