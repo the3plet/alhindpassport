@@ -1,13 +1,17 @@
 import {
     Bell,
+    BookPlus,
     ChevronDown,
+    FileDown,
     GalleryThumbnails,
     Home,
     IndianRupee,
     LayoutDashboard,
     LogOut,
     Settings2,
+    TimerReset,
     UserCircle2,
+    Workflow,
   } from "lucide-react";
   
   import {
@@ -40,8 +44,23 @@ import { DropdownMenu, DropdownMenuTrigger } from "../ui/dropdown-menu";
       edit: [
         {
           title: "Appointments",
-          url: "",
-          icon: LayoutDashboard,
+          url: "/dashboard/appointment",
+          icon: BookPlus,
+        },
+        {
+          title: "Track Application",
+          url: "/dashboard/track",
+          icon: FileDown,
+        },
+        {
+          title: "Reschedule Form",
+          url: "/dashboard/reshedule",
+          icon: TimerReset,
+        },
+        {
+          title: "Services",
+          url: "/dashboard/service",
+          icon: Workflow,
         },
       ], // no sub-items for this one
     },

@@ -10,15 +10,17 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
+            <Link to=''>
             <img src='https://www.alhind.com/assets/img/logo-alhind.webp' className='w-44' alt='img'/> 
+            </Link>
           </div>
           
           <div className="hidden md:flex items-center space-x-4">
-            <a href="#home" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Home</a>
+            <a href="/" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Home</a>
             <a href="#services" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Services</a>
             <a href="#track" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Track Application</a>
             <a href="#appointments" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Appointments</a>
-            <a href="#documents" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Documents</a>
+            <a href="complaint" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Complaints</a>
             <Link to='login'>
             <button className="bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-700 flex items-center gap-2">
               <LogIn size={18} />

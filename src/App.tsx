@@ -14,13 +14,16 @@ import {
 import Home from "./pages/Home";
 import { Outlet } from "react-router";
 import { Toaster } from "./components/ui/sonner";
+import Footer from "./components/Footer";
 
 
 
 function App() {
   return (
     <>
+    <Navbar/>
     <Outlet/>
+    <Footer/>
     <Toaster/>
     </>
   );
