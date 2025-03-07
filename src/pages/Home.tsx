@@ -137,13 +137,13 @@ const Home = (
                    Schedule or reschedule appointment
                  </p>
                </div>
-                 <a href='faq'>
+                 <Link to='faq'>
                <div className="bg-white p-6 rounded-lg shadow hover:shadow-md transition-shadow text-center">
                  <HelpCircle className="w-8 h-8 mx-auto mb-4 text-blue-600" />
                  <h3 className="font-semibold mb-2">FAQs</h3>
                  <p className="text-gray-600">Find answers to common questions</p>
                </div>
-                 </a>
+                 </Link>
              </div>
            </div>
          </section>

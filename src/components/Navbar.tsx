@@ -20,20 +20,20 @@ export default function Navbar() {
             <a href="#services" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Services</a>
             <a href="#track" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Track Application</a>
             <a href="#appointments" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Appointments</a>
-            <a href="complaint" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Complaints</a>
+            <Link to="complaint" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Complaints</Link>
             <Link to='login'>
             <button className="bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-700 flex items-center gap-2">
               <LogIn size={18} />
               Login
             </button>
             </Link>
-            <a href='/admin'>
+            <Link to='/admin'>
 
             <button className="bg-green-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-green-700 flex items-center gap-2">
               <User size={18} />
               Admin
             </button>
-            </a>
+            </Link>
           </div>
           
           <div className="md:hidden">
