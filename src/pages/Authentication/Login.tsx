@@ -5,6 +5,7 @@ import { User2 } from "lucide-react";
 // import { useAuthStore } from "@/zustand/store";
 import { Controller, SubmitHandler, useForm } from "react-hook-form";
 import { Link, useNavigate } from "react-router";
+import { toast } from "sonner";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -27,6 +28,11 @@ const Login = () => {
     if(data.email ==="admin" && data.password ==='admin'){
       navigate("/admin")
     }
+    else{
+      alert("Credentials incorrect")
+    
+    }
+  
     
   };
   return (
@@ -75,11 +81,11 @@ const Login = () => {
             {errors.password.message}
           </p>
         )}
-        {/* <Link to="/dashboard"> */}
+       
         <Button className="w-full" type="submit">
           Login
         </Button>
-        {/* </Link> */}
+        
         <div className="flex justify-between">
 
         {/* <p className="text-xs hover:underline cursor-pointer">Forgot password?</p> */}

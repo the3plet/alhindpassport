@@ -4,16 +4,16 @@ import { CalendarCheck, Clock } from "lucide-react";
 
 const appointments = {
   upcoming: [
-    { id: 1, applicationNumber: "PAS12345", title: "Passport Appointment", date: "2025-03-10", time: "10:00 AM", status: "Confirmed" },
-    { id: 2, applicationNumber: "VISA67890", title: "Visa Interview", date: "2025-03-12", time: "02:00 PM", status: "Pending" },
-    { id: 3, applicationNumber: "PAS67891", title: "Passport Renewal", date: "2025-03-15", time: "09:00 AM", status: "Confirmed" },
-    { id: 4, applicationNumber: "VISA34567", title: "Visa Document Submission", date: "2025-03-18", time: "01:00 PM", status: "Pending" },
+    { id: 1, applicationNumber: "PAS12345", title: "Passport Service", date: "2025-03-10", time: "10:00 AM", status: "Confirmed" },
+    { id: 2, applicationNumber: "VISA67890", title: "Visa Service", date: "2025-03-12", time: "02:00 PM", status: "Pending" },
+    { id: 3, applicationNumber: "PAS67891", title: "Passport Service", date: "2025-03-15", time: "09:00 AM", status: "Confirmed" },
+    { id: 4, applicationNumber: "VISA34567", title: "OCI Service", date: "2025-03-18", time: "01:00 PM", status: "Pending" },
   ],
   previous: [
-    { id: 5, applicationNumber: "PAS54321", title: "Passport Renewal", date: "2025-02-28", time: "11:30 AM", status: "Completed" },
-    { id: 6, applicationNumber: "VISA09876", title: "Visa Consultation", date: "2025-02-25", time: "03:00 PM", status: "Canceled" },
-    { id: 7, applicationNumber: "PAS98765", title: "Passport Application", date: "2025-02-20", time: "10:30 AM", status: "Completed" },
-    { id: 8, applicationNumber: "VISA45678", title: "Visa Interview", date: "2025-02-15", time: "12:00 PM", status: "Completed" },
+    { id: 5, applicationNumber: "PAS54321", title: "Passport Service", date: "2025-02-28", time: "11:30 AM", status: "Completed" },
+    { id: 6, applicationNumber: "VISA09876", title: "Miscellaneous Consular Services", date: "2025-02-25", time: "03:00 PM", status: "Canceled" },
+    { id: 7, applicationNumber: "PAS98765", title: "OCI Service", date: "2025-02-20", time: "10:30 AM", status: "Completed" },
+    { id: 8, applicationNumber: "VISA45678", title: "Visa Service", date: "2025-02-15", time: "12:00 PM", status: "Completed" },
   ],
 };
 
