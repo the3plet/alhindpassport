@@ -27,7 +27,7 @@ export default function Navbar() {
               Login
             </button>
             </Link>
-            <Link to='/admin'>
+            <Link to='/login'>
 
             <button className="bg-green-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-green-700 flex items-center gap-2">
               <User size={18} />

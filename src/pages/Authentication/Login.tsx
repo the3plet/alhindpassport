@@ -43,7 +43,7 @@ const Login = () => {
         >
         <div className=" flex flex-col justify-center items-center gap-1">
           <User2 className=" rounded-full border-2 border-black"/>
-          <h1 className="font-Catamaran font-bold text-xl">User Login</h1>
+          <h1 className="font-Catamaran font-bold text-xl">Portal Login</h1>
         </div>
         <Controller
           name="email"
