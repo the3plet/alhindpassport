@@ -5,6 +5,7 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@
 import { BarChart, ClipboardList } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Bar, Pie, PieChart, BarChart as ReBarChart, XAxis, YAxis, Tooltip, Legend, CartesianGrid, Bar as ReBar } from "recharts";
+import { Link } from "react-router";
 
 const locationData = [
     { name: "Colombo", count: 4 },
@@ -48,6 +49,7 @@ export default function AdminPanel() {
     <div className="flex h-screen">
       <aside className="w-64 bg-neutral-900 text-neutral-100 p-5">
         <h2 className="text-xl font-semibold mb-6">Admin Panel</h2>
+        
         <nav>
           <button className="flex items-center gap-2 p-2 w-full text-left hover:bg-neutral-700 rounded" onClick={() => setActiveTab("dashboard")}>
             <BarChart className="w-5 h-5" /> Dashboard
@@ -55,7 +57,11 @@ export default function AdminPanel() {
           <button className="flex items-center gap-2 p-2 w-full text-left hover:bg-neutral-700 rounded mt-2" onClick={() => setActiveTab("appointments")}>
             <ClipboardList className="w-5 h-5" /> Appointments
           </button>
+
         </nav>
+        <Link to='/' >
+        <Button className="cursor-pointer hover:border m-2">Logout</Button>
+        </Link>
       </aside>
       <main className="flex-1 p-6  text-neutral-800" >
       {activeTab === "dashboard" && (

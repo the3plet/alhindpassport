@@ -17,15 +17,20 @@ export const router = createBrowserRouter([
     element: <App />,
     children: [
       { path: "", element: <Home /> },
-      {path:"faq", element:<Faq/>},
-      {path:"complaint", element:<ComplaintForm/>},
+      { path: "faq", element: <Faq /> },
+      { path: "complaint", element: <ComplaintForm /> },
     ],
   },
-  { path: "login", element: <Login /> },{path:"admin",element:<AdminHome/>},
-  { path: "dashboard", element: <DashboardHome /> ,children:[
-    {path:"service", element:<UserServices/>},
-    {path:"reshedule", element:<UserReshedule/>},
-    {path:"track", element:<UserTrack/>},
-    {path:"appointment", element:<UserAppointment/>},
-  ]},
+  { path: "login", element: <Login /> },
+  { path: "admin", element: <AdminHome /> },
+  {
+    path: "dashboard",
+    element: <DashboardHome />,
+    children: [
+      { path: "service", element: <UserServices /> },
+      { path: "reshedule", element: <UserReshedule /> },
+      { path: "track", element: <UserTrack /> },
+      { path: "appointment", element: <UserAppointment /> },
+    ],
+  },
 ]);

@@ -21,8 +21,12 @@ const Login = () => {
   });
 
   const handleLogin: SubmitHandler<any> = (data) => {
-    // login(data.email,data.password,navigate)
-    console.log(data)
+    if(data.email === 'user' && data.password === 'user'){
+      navigate('/dashboard')
+    }
+    if(data.email ==="admin" && data.password ==='admin'){
+      navigate("/admin")
+    }
     
   };
   return (
@@ -71,11 +75,11 @@ const Login = () => {
             {errors.password.message}
           </p>
         )}
-        <Link to="/dashboard">
+        {/* <Link to="/dashboard"> */}
         <Button className="w-full" type="submit">
           Login
         </Button>
-        </Link>
+        {/* </Link> */}
         <div className="flex justify-between">
 
         {/* <p className="text-xs hover:underline cursor-pointer">Forgot password?</p> */}
