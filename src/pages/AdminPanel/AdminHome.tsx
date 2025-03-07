@@ -8,8 +8,10 @@ import { Bar, Pie, PieChart, BarChart as ReBarChart, XAxis, YAxis, Tooltip, Lege
 import { Link } from "react-router";
 
 const locationData = [
-    { name: "Colombo", count: 4 },
-    { name: "Kandy", count: 1 }
+    { name: "Passport", count: 4 },
+    { name: "Visa", count: 2 },
+    { name: "OSI", count: 4 },
+    { name: " Consular ", count: 3 }
   ];
   
   const serviceData = [
@@ -77,17 +79,17 @@ export default function AdminPanel() {
               </Card>
               <Card className="bg-gray-300 text-black">
                 <CardHeader>
-                  <CardTitle>Revenue Generated</CardTitle>
+                  <CardTitle>Appointment Pending</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-2xl font-bold">${appointments.reduce((acc, appt) => acc + appt.fee, 0)}</p>
+                  <p className="text-2xl font-bold">5/13</p>
                 </CardContent>
               </Card>
             </div>
             <div className="grid grid-cols-2 gap-4">
               <Card className="bg-gray-300 text-black p-4">
                 <CardHeader>
-                  <CardTitle>Appointments Per Location</CardTitle>
+                  <CardTitle>Appointments Per Service</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <ReBarChart width={400} height={250} data={locationData}>
