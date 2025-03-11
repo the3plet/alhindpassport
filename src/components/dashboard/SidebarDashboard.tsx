@@ -147,7 +147,9 @@ import { DropdownMenu, DropdownMenuTrigger } from "../ui/dropdown-menu";
                     <LogOut />{" "}
                     <button
                       className="w-full flex justify-start"
-                      onClick={()=>window.location.replace('/')}
+                      onClick={()=>{window.location.replace('/')
+                        localStorage.removeItem("verified")
+                      }}
                     >
                       Logout
                     </button>

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { Service } from '../types';
+import RegistrationDialog from './RegistrationDialog';
 
 interface ServicesCarouselProps {
   services: Service[];
@@ -49,8 +50,8 @@ export default function ServicesCarousel({ services }: ServicesCarouselProps) {
                   <span className="ml-2">{service.processingTime}</span>
                 </div>
               </div>
-              <button className="mt-8 bg-white text-blue-800 px-6 py-3 rounded-md font-semibold hover:bg-gray-100 transition-colors">
-                Schedule Now
+              <button className="mt-8 text-blue-800  rounded-md font-semibold ">
+                <RegistrationDialog/>
               </button>
             </div>
           </div>

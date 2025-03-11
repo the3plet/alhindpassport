@@ -31,7 +31,7 @@ const RegistrationDialog = () => {
 
       <DialogContent className="w-full max-w-3xl p-6">
         <DialogTitle className="font-semibold text-xl">
-          Service Request Form
+          Appointment Request Form
         </DialogTitle>
         <form className="grid grid-cols-2 gap-6" >
           <div className="flex flex-col gap-1.5">

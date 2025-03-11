@@ -1,6 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { CalendarCheck, Clock } from "lucide-react";
+import FeedbackPopup from "@/components/dashboard/FeedbackPopup";
 
 const appointments = {
   upcoming: [
@@ -12,9 +13,7 @@ const appointments = {
   previous: [
     { id: 5, applicationNumber: "PAS54321", title: "Passport Service", date: "2025-02-28", time: "11:30 AM", status: "Completed" },
     { id: 6, applicationNumber: "VISA09876", title: "Miscellaneous Consular Services", date: "2025-02-25", time: "03:00 PM", status: "Canceled" },
-    { id: 7, applicationNumber: "PAS98765", title: "OCI Service", date: "2025-02-20", time: "10:30 AM", status: "Completed" },
-    { id: 8, applicationNumber: "VISA45678", title: "Visa Service", date: "2025-02-15", time: "12:00 PM", status: "Completed" },
-  ],
+    ],
 };
 
 export default function UserAppointment() {
@@ -58,7 +57,11 @@ export default function UserAppointment() {
                   <p className="text-sm text-gray-500">Application No: {appt.applicationNumber}</p>
                   <p className="text-sm text-gray-500">{appt.date} at {appt.time}</p>
                 </div>
+                <div className="flex flex-col gap-1.5">
+
                 <Badge className={`rounded-full bg-white px-2 py-0.5 text-xs border ${appt.status === "Completed" ? "border-gray-500 text-gray-500" : "border-red-500 text-red-500"}`}>{appt.status}</Badge>
+                <FeedbackPopup applicationNo={appt.applicationNumber}/>
+                </div>
               </div>
             ))}
           </CardContent>

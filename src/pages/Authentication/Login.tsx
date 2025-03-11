@@ -9,7 +9,7 @@ import { toast } from "sonner";
 
 const Login = () => {
   const navigate = useNavigate();
-//   const login = useAuthStore((state)=>state.loginAsync)
+  //   const login = useAuthStore((state)=>state.loginAsync)
   const {
     control,
     handleSubmit,
@@ -22,27 +22,26 @@ const Login = () => {
   });
 
   const handleLogin: SubmitHandler<any> = (data) => {
-    if(data.email === 'user' && data.password === 'user'){
-      navigate('/dashboard')
+    if (data.email === "user" && data.password === "user") {
+      navigate("/dashboard");
+      localStorage.setItem("verified", "true");
+      return;
     }
-    if(data.email ==="admin" && data.password ==='admin'){
-      navigate("/admin")
+    if (data.email === "admin" && data.password === "admin") {
+      navigate("/admin");
+      return;
     }
-    else{
-      alert("Credentials incorrect")
-    
-    }
-  
-    
+
+    alert("Credentials incorrect");
   };
   return (
     <div className="w-full h-screen flex justify-center items-center bg-gray-100">
       <form
         className="space-y-2 border p-8 py-16 shadow-lg rounded-md bg-gray-50"
         onSubmit={handleSubmit(handleLogin)}
-        >
+      >
         <div className=" flex flex-col justify-center items-center gap-1">
-          <User2 className=" rounded-full border-2 border-black"/>
+          <User2 className=" rounded-full border-2 border-black" />
           <h1 className="font-Catamaran font-bold text-xl">Portal Login</h1>
         </div>
         <Controller
@@ -70,7 +69,8 @@ const Login = () => {
           render={({ field }) => (
             <Input
               placeholder="Password"
-              className="w-80" type="password"
+              className="w-80"
+              type="password"
               {...field}
               aria-invalid={errors.password ? "true" : "false"}
             />
@@ -81,14 +81,13 @@ const Login = () => {
             {errors.password.message}
           </p>
         )}
-       
+
         <Button className="w-full" type="submit">
           Login
         </Button>
-        
-        <div className="flex justify-between">
 
-        {/* <p className="text-xs hover:underline cursor-pointer">Forgot password?</p> */}
+        <div className="flex justify-between">
+          {/* <p className="text-xs hover:underline cursor-pointer">Forgot password?</p> */}
         </div>
       </form>
     </div>

@@ -1,43 +1,121 @@
-import React, { useState } from 'react';
-import { Menu, User, LogIn, X, Home, FileText, Calendar, Search, HelpCircle } from 'lucide-react';
-import { Link } from 'react-router';
+import React, { useEffect, useState } from "react";
+import {
+  Menu,
+  User,
+  LogIn,
+  X,
+  Home,
+  FileText,
+  Calendar,
+  Search,
+  HelpCircle,
+  User2Icon,
+} from "lucide-react";
+import { Link } from "react-router";
+import LoginPop from "./LoginPop";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "./ui/dropdown-menu";
+import { Button } from "./ui/button";
 
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [verified, setVerified] = useState<string>("");
 
+  useEffect(() => {
+    setVerified(localStorage.getItem("verified") || "");
+  }, []);
   return (
     <nav className="bg-white shadow-md">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
-            <Link to=''>
-            <img src='https://www.alhind.com/assets/img/logo-alhind.webp' className='w-44' alt='img'/> 
+            <Link to="">
+              <img
+                src="https://www.alhind.com/assets/img/logo-alhind.webp"
+                className="w-44"
+                alt="img"
+              />
             </Link>
           </div>
-          
-          <div className="hidden md:flex items-center space-x-4">
-            <a href="/" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Home</a>
-            <a href="#services" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Services</a>
-            <a href="#track" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Track Application</a>
-            <a href="#appointments" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Appointments</a>
-            <Link to="complaint" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Complaints</Link>
-            <Link to='login'>
-            <button className="bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-700 flex items-center gap-2">
-              <LogIn size={18} />
-              Login
-            </button>
-            </Link>
-            <Link to='/login'>
 
-            <button className="bg-green-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-green-700 flex items-center gap-2">
-              <User size={18} />
-              Admin
-            </button>
+          <div className="hidden md:flex items-center space-x-4">
+            <a
+              href="/"
+              className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium"
+            >
+              Home
+            </a>
+            <a
+              href="#services"
+              className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium"
+            >
+              Services
+            </a>
+            <a
+              href="#track"
+              className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium"
+            >
+              Track Application
+            </a>
+            {/* <a
+              href="#appointments"
+              className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium"
+            >
+              Appointments
+            </a> */}
+            <Link
+              to="complaint"
+              className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium"
+            >
+              Complaints
+            </Link>
+
+            {verified === "true" ? (
+              <DropdownMenu>
+                <DropdownMenuTrigger>
+                  <div className="flex flex-col justify-center items-center">
+                    <span className="hover:border-2 border-black rounded-2xl">
+                      <User2Icon size={25} />
+                    </span>
+                    <p className="text-xs">User</p>
+                  </div>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent>
+                  <Link to={'/dashboard'}>
+                  <DropdownMenuItem>Profile</DropdownMenuItem>
+                  </Link>
+                  <DropdownMenuItem>Support</DropdownMenuItem>
+                  <DropdownMenuItem>
+                    <Button
+                      variant={"link"}
+                      className="p-2 h-[32px] pl-0"
+                      onClick={() => {
+                        localStorage.removeItem("verified");
+                        window.location.reload();
+                      }}
+                    >
+                      Logout
+                    </Button>
+                  </DropdownMenuItem>
+                </DropdownMenuContent>
+              </DropdownMenu>
+            ) : (
+              <LoginPop />
+            )}
+
+            <Link to="/login">
+              <button className="bg-green-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-green-700 flex items-center gap-2">
+                Admin
+              </button>
             </Link>
           </div>
-          
+
           <div className="md:hidden">
-            <button 
+            <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className="text-gray-700 hover:text-blue-600"
             >
@@ -78,7 +156,7 @@ export default function Navbar() {
                 Track Application
               </div>
             </a>
-            <a
+            {/* <a
               href="#appointments"
               className="text-gray-700 hover:bg-blue-50 block px-3 py-2 rounded-md text-base font-medium"
             >
@@ -86,7 +164,7 @@ export default function Navbar() {
                 <Calendar size={18} />
                 Appointments
               </div>
-            </a>
+            </a> */}
             <a
               href="#documents"
               className="text-gray-700 hover:bg-blue-50 block px-3 py-2 rounded-md text-base font-medium"

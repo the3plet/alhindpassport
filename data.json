@@ -1,0 +1,20 @@
+{
+    "login": [
+      {
+        "contact": "user1@example.com",
+        "username": "user1",
+        "otp": "1111111"
+      },
+      {
+        "contact": "1234567890",
+        "username": "user2",
+        "otp": "1234567"
+      },
+      {
+        "contact": "0987654321",
+        "username": "user3",
+        "otp": "0000000"
+      }
+    ]
+  }
+  
