@@ -48,6 +48,7 @@ const LoginPop = () => {
     if (user) {
       localStorage.setItem("verified", "true");
       localStorage.setItem("username",user.username);
+      navigate('/')
       window.location.reload();
       return;
     }
