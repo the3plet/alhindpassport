@@ -1,20 +1,173 @@
 {
-    "login": [
-      {
-        "contact": "user1@example.com",
-        "username": "user1",
-        "otp": "1111111"
-      },
-      {
-        "contact": "1234567890",
-        "username": "user2",
-        "otp": "1234567"
-      },
-      {
-        "contact": "0987654321",
-        "username": "user3",
-        "otp": "0000000"
-      }
-    ]
-  }
-  
+  "login": [
+    {
+      "contact": "user1@example.com",
+      "username": "user1",
+      "otp": "1111111"
+    },
+    {
+      "contact": "1234567890",
+      "username": "user2",
+      "otp": "1234567"
+    },
+    {
+      "contact": "0987654321",
+      "username": "user3",
+      "otp": "0000000"
+    }
+  ],
+  "locations": [
+    {
+      "id": 1,
+      "name": "Abu Dhabi (Al Khalidiya)",
+      "no_of_counters": 18,
+      "day": "Saturday to Thursday",
+      "opening_hours": "08:00 - 14:00"
+    },
+    {
+      "id": 2,
+      "name": "Abu Dhabi (Al Reem)",
+      "no_of_counters": 22,
+      "day": "Saturday to Thursday",
+      "opening_hours": "08:00 - 14:00"
+    },
+    {
+      "id": 3,
+      "name": "Abu Dhabi (Musaffah)",
+      "no_of_counters": 14,
+      "day": "Saturday to Thursday",
+      "opening_hours": "08:00 - 14:00"
+    },
+    {
+      "id": 4,
+      "name": "Al Ain",
+      "no_of_counters": 19,
+      "day": "Saturday to Thursday",
+      "opening_hours": "08:00 - 14:00"
+    },
+    {
+      "id": 5,
+      "name": "Ghyathi",
+      "no_of_counters": 25,
+      "day": "Saturday to Thursday",
+      "opening_hours": "08:00 - 14:00"
+    },
+    {
+      "id": 6,
+      "name": "Dubai (Bur Dubai)",
+      "no_of_counters": 12,
+      "day": "Saturday to Thursday",
+      "opening_hours": "08:00 - 14:00"
+    },
+    {
+      "id": 7,
+      "name": "Dubai (JLT/ Marina)",
+      "no_of_counters": 20,
+      "day": "Saturday to Thursday",
+      "opening_hours": "08:00 - 14:00"
+    },
+    {
+      "id": 8,
+      "name": "Sharjah (Al Majaz)",
+      "no_of_counters": 17,
+      "day": "Saturday to Thursday",
+      "opening_hours": "08:00 - 14:00"
+    },
+    {
+      "id": 9,
+      "name": "Ajman (Al Jerf)",
+      "no_of_counters": 13,
+      "day": "Saturday to Thursday",
+      "opening_hours": "08:00 - 14:00"
+    },
+    {
+      "id": 10,
+      "name": "Fujairah",
+      "no_of_counters": 21,
+      "day": "Saturday to Thursday",
+      "opening_hours": "08:00 - 14:00"
+    },
+    {
+      "id": 11,
+      "name": "Umm Al Quwain",
+      "no_of_counters": 15,
+      "day": "Saturday to Thursday",
+      "opening_hours": "08:00 - 14:00"
+    },
+    {
+      "id": 12,
+      "name": "Khor Fakkan (Corniche/ Subara)",
+      "no_of_counters": 24,
+      "day": "Saturday to Thursday",
+      "opening_hours": "08:00 - 14:00"
+    },
+    {
+      "id": 13,
+      "name": "Kalba",
+      "no_of_counters": 10,
+      "day": "Saturday to Thursday",
+      "opening_hours": "08:00 - 14:00"
+    },
+    {
+      "id": 14,
+      "name": "Ras Al Khaimah (Nakheel/ Khujan/ Mareed)",
+      "no_of_counters": 16,
+      "day": "Saturday to Thursday",
+      "opening_hours": "08:00 - 14:00"
+    }
+  ],
+  "services": [
+    {
+      "id": 1,
+      "name": "Passport",
+      "details": [
+        {
+          "title": "Step by Step Guide",
+          "description": "Guide details here"
+        },
+        {
+          "title": "Fee",
+          "description": "Passport fee details here"
+        },
+        {
+          "title": "Application Forms",
+          "description": "Application form details here"
+        },
+        {
+          "title": "Schedule an Appointment",
+          "description": "Appointment scheduling details here"
+        },
+        {
+          "title": "Check List",
+          "description": "Checklist details here"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Visa",
+      "details": [
+        {
+          "title": "Step by Step Guide",
+          "description": "Guide details here"
+        },
+        {
+          "title": "Fee",
+          "description": "Visa fee details here"
+        },
+        {
+          "title": "Application Forms",
+          "description": "Application form details here"
+        },
+        {
+          "title": "Schedule an Appointment",
+          "description": "Appointment scheduling details here"
+        },
+        {
+          "title": "Check List",
+          "description": "Checklist details here"
+        }
+      ]
+    }
+  ]
+}

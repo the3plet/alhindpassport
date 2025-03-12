@@ -59,7 +59,7 @@ export default function Navbar() {
               href="#track"
               className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium"
             >
-              Track Application
+              About Us
             </a>
             {/* <a
               href="#appointments"
@@ -67,12 +67,15 @@ export default function Navbar() {
             >
               Appointments
             </a> */}
+          {verified ==='true' ?(
+
             <Link
-              to="complaint"
-              className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium"
+            to="complaint"
+            className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium"
             >
               Complaints
             </Link>
+            ):null}
 
             {verified === "true" ? (
               <DropdownMenu>

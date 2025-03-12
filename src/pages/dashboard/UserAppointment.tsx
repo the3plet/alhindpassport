@@ -2,6 +2,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { CalendarCheck, Clock } from "lucide-react";
 import FeedbackPopup from "@/components/dashboard/FeedbackPopup";
+import CancellationPopup from "@/components/dashboard/CancellationPopup";
 
 const appointments = {
   upcoming: [
@@ -24,7 +25,7 @@ export default function UserAppointment() {
         <Card>
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
-              <Clock className="w-5 h-5 text-blue-500" /> Upcoming Appointments
+              <Clock className="w-5 h-5 text-blue-500" /> Open Application
             </CardTitle>
           </CardHeader>
           <CardContent>
@@ -35,7 +36,11 @@ export default function UserAppointment() {
                   <p className="text-sm text-gray-500">Application No: {appt.applicationNumber}</p>
                   <p className="text-sm text-gray-500">{appt.date} at {appt.time}</p>
                 </div>
+                <div className="flex flex-col gap-1.5">
+
                 <Badge className={`rounded-full bg-white px-2 py-0.5 text-xs border ${appt.status === "Confirmed" ? "border-green-500 text-green-500" : "border-yellow-500 text-yellow-500"}`}>{appt.status}</Badge>
+              <CancellationPopup/>
+                </div>
               </div>
             ))}
           </CardContent>
@@ -46,7 +51,7 @@ export default function UserAppointment() {
         <Card>
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
-              <CalendarCheck className="w-5 h-5 text-green-500" /> Previous Appointments
+              <CalendarCheck className="w-5 h-5 text-green-500" />Closed Applications
             </CardTitle>
           </CardHeader>
           <CardContent>

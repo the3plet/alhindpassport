@@ -17,7 +17,7 @@ import { toast } from "sonner";
 const services: Service[] = [
   {
     id: "1",
-    name: "Passport Renewal",
+    name: "Passport Renewal Service",
     description:
       "Renew your expired or soon-to-expire passport with our efficient service.",
     fees: 145,
@@ -25,7 +25,7 @@ const services: Service[] = [
   },
   {
     id: "2",
-    name: "Visa Application",
+    name: "Visa Application Service",
     description:
       "Apply for various types of visas including tourist, business, and student visas.",
     fees: 160,
@@ -33,7 +33,7 @@ const services: Service[] = [
   },
   {
     id: "3",
-    name: "OCI Card",
+    name: "OCI Card Service",
     description:
       "Apply for Overseas Citizen of India (OCI) card or get your existing card renewed.",
     fees: 275,
@@ -49,7 +49,7 @@ const services: Service[] = [
   },
   {
     id: "5",
-    name: "Attestation",
+    name: "Attestation Service",
     description: "Get your documents attested for use in foreign countries.",
     fees: 50,
     processingTime: "3-5 business days",
@@ -71,13 +71,9 @@ const Home = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center gap-2 text-red-700 mb-2">
             <AlertTriangle size={24} />
-            <h2 className="text-xl font-bold">Important Notices</h2>
+            <h2 className="text-xl font-bold">This website is for demo purposes</h2>
           </div>
-          <ul className="list-disc list-inside space-y-2 text-red-700">
-            <li>Beware of fake websites and fraudulent offers</li>
-            <li>Never share your login credentials or OTP with anyone</li>
-            <li>Report suspicious activities to our helpdesk</li>
-          </ul>
+          
         </div>
       </section>
 
@@ -87,7 +83,7 @@ const Home = () => {
           <h2 className="text-3xl font-bold text-center mb-12">Our Services</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service) => (
-              <ServiceCard key={service.id} service={service} />
+              <ServiceCard key={service.id} service={service}/>
             ))}
           </div>
         </div>
@@ -101,11 +97,13 @@ const Home = () => {
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 cursor-pointer"
             onClick={handleClick}
           >
+            <Link to='/offices'>
             <div className="bg-white p-6 rounded-lg shadow hover:shadow-md transition-shadow text-center">
               <MapPin className="w-8 h-8 mx-auto mb-4 text-blue-600" />
               <h3 className="font-semibold mb-2">Consular Offices</h3>
-              <p className="text-gray-600">Find nearest consular office</p>
+              <p className="text-gray-600">Find your's nearest consular office.</p>
             </div>
+            </Link>
             <Link to={authStatus ? '/dashboard/track' : '#'}>
             <div className="bg-white p-6 rounded-lg shadow hover:shadow-md transition-shadow text-center">
               <FileText className="w-8 h-8 mx-auto mb-4 text-blue-600" />
@@ -122,7 +120,7 @@ const Home = () => {
               </p>
             </div>
             </Link>
-            <Link to={authStatus ? 'faq' : '#'}>
+            <Link to='faq'>
               <div className="bg-white p-6 rounded-lg shadow hover:shadow-md transition-shadow text-center">
                 <HelpCircle className="w-8 h-8 mx-auto mb-4 text-blue-600" />
                 <h3 className="font-semibold mb-2">FAQs</h3>
