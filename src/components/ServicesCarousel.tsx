@@ -1,14 +1,34 @@
-import React, { useState, useEffect } from 'react';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
-import { Service } from '../types';
-import RegistrationDialog from './RegistrationDialog';
+import React, { useState, useEffect } from "react";
+import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
+import { Service } from "../types";
+import RegistrationDialog from "./RegistrationDialog";
+import { Button } from "./ui/button";
+import { useNavigate } from "react-router";
 
 interface ServicesCarouselProps {
   services: Service[];
 }
 
 export default function ServicesCarousel({ services }: ServicesCarouselProps) {
+  
+  
+
+  const handleClick = (id:string) => {
+    let serviceList = {};
+  switch (id) {
+    case "1":
+      serviceList = "passport";
+      break;
+    case "2":
+      serviceList = "visa";
+      break;
+    default:
+      serviceList = "";
+  }
+    navigate(`/service/${serviceList}`);
+  };
   const [currentIndex, setCurrentIndex] = useState(0);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -23,12 +43,14 @@ export default function ServicesCarousel({ services }: ServicesCarouselProps) {
   };
 
   const goToPrevious = () => {
-    setCurrentIndex((current) => (current - 1 + services.length) % services.length);
+    setCurrentIndex(
+      (current) => (current - 1 + services.length) % services.length
+    );
   };
 
   return (
     <div className="relative w-full h-[400px] overflow-hidden bg-gradient-to-r from-blue-900 to-blue-700">
-      <div 
+      <div
         className="absolute inset-0 flex transition-transform duration-500 ease-in-out"
         style={{ transform: `translateX(-${currentIndex * 100}%)` }}
       >
@@ -43,16 +65,22 @@ export default function ServicesCarousel({ services }: ServicesCarouselProps) {
               <div className="flex items-center justify-center gap-8 text-lg">
                 <div className="flex items-center">
                   <span className="font-semibold">Fees:</span>
-                  <span className="ml-2">${service.fees}</span>
+                  <span className="ml-2">AED {service.fees}</span>
                 </div>
                 <div className="flex items-center">
                   <span className="font-semibold">Processing Time:</span>
                   <span className="ml-2">{service.processingTime}</span>
                 </div>
               </div>
-              <button className="mt-8 text-blue-800  rounded-md font-semibold ">
-                <RegistrationDialog/>
-              </button>
+              <Button
+                className="mt-8 text-white bg-blue-600 w-44  rounded-md font-semibold hover:bg-blue-500 cursor-pointer"
+                onClick={() => {
+                  
+                  handleClick(service.id);
+                }}
+              >
+                Start Now <ArrowRight className="mt-1" />
+              </Button>
             </div>
           </div>
         ))}
@@ -78,7 +106,7 @@ export default function ServicesCarousel({ services }: ServicesCarouselProps) {
             key={index}
             onClick={() => setCurrentIndex(index)}
             className={`w-2 h-2 rounded-full transition-colors ${
-              index === currentIndex ? 'bg-white' : 'bg-white/50'
+              index === currentIndex ? "bg-white" : "bg-white/50"
             }`}
           />
         ))}

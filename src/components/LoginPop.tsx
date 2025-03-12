@@ -41,11 +41,13 @@ const LoginPop = () => {
   };
 
   const handleLogin: SubmitHandler<any> = (data) => {
+   
     const user = api.login.find(
       (val) => val.contact === data.email && val.otp === data.otp
     );
     if (user) {
       localStorage.setItem("verified", "true");
+      localStorage.setItem("username",user.username);
       window.location.reload();
       return;
     }

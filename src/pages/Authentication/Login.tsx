@@ -25,6 +25,7 @@ const Login = () => {
     if (data.email === "user" && data.password === "user") {
       navigate("/dashboard");
       localStorage.setItem("verified", "true");
+      // localStorage.setItem()
       return;
     }
     if (data.email === "admin" && data.password === "admin") {

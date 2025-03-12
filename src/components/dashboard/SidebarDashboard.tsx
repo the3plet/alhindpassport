@@ -13,6 +13,7 @@ import {
     TowerControl,
     User2,
     UserCircle2,
+    UserPlus,
     Workflow,
   } from "lucide-react";
   
@@ -44,6 +45,11 @@ import { DropdownMenu, DropdownMenuTrigger } from "../ui/dropdown-menu";
       url: "/admin/dashboard",
       icon: User2,
       edit: [
+        {
+          title: "Profile",
+          url: "/dashboard",
+          icon: UserPlus
+        },
         {
           title: "Appointments",
           url: "/dashboard/appointment",

@@ -29,7 +29,7 @@ export default function Navbar() {
     setVerified(localStorage.getItem("verified") || "");
   }, []);
   return (
-    <nav className="bg-white shadow-md fixed z-50 w-full">
+    <nav className="bg-white shadow-md fixed z-50 w-full ">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
@@ -55,27 +55,28 @@ export default function Navbar() {
             >
               Services
             </a>
-            <a
-              href="#track"
+            <Link
+              to="aboutus"
               className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium"
             >
               About Us
-            </a>
-            {/* <a
-              href="#appointments"
-              className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium"
-            >
-              Appointments
-            </a> */}
-          {verified ==='true' ?(
-
-            <Link
-            to="complaint"
-            className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium"
-            >
-              Complaints
             </Link>
-            ):null}
+            {verified === "true" ? (
+              <Link
+                to="/dashboard/appointment"
+                className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium"
+              >
+                Appointments
+              </Link>
+            ) : null}
+            {verified === "true" ? (
+              <Link
+                to="complaint"
+                className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium"
+              >
+                Complaints
+              </Link>
+            ) : null}
 
             {verified === "true" ? (
               <DropdownMenu>
@@ -84,12 +85,14 @@ export default function Navbar() {
                     <span className="hover:border-2 border-black rounded-2xl">
                       <User2Icon size={25} />
                     </span>
-                    <p className="text-xs">User</p>
+                    <p className="text-xs">
+                      {localStorage.getItem("username")}
+                    </p>
                   </div>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent>
-                  <Link to={'/dashboard'}>
-                  <DropdownMenuItem>Profile</DropdownMenuItem>
+                  <Link to={"/dashboard"}>
+                    <DropdownMenuItem>Profile</DropdownMenuItem>
                   </Link>
                   <DropdownMenuItem>Support</DropdownMenuItem>
                   <DropdownMenuItem>

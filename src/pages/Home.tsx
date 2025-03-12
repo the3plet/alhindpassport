@@ -17,7 +17,7 @@ import { toast } from "sonner";
 const services: Service[] = [
   {
     id: "1",
-    name: "Passport Renewal Service",
+    name: "Passport Service",
     description:
       "Renew your expired or soon-to-expire passport with our efficient service.",
     fees: 145,
@@ -25,7 +25,7 @@ const services: Service[] = [
   },
   {
     id: "2",
-    name: "Visa Application Service",
+    name: "Visa Service",
     description:
       "Apply for various types of visas including tourist, business, and student visas.",
     fees: 160,
@@ -71,7 +71,7 @@ const Home = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center gap-2 text-red-700 mb-2">
             <AlertTriangle size={24} />
-            <h2 className="text-xl font-bold">This website is for demo purposes</h2>
+            <h2 className="text-xl font-bold">This website is only for demostration purposes</h2>
           </div>
           
         </div>

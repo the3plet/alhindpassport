@@ -12,7 +12,7 @@ setOpen(false)
     }
   return (
     <Dialog open={open} onOpenChange={setOpen}>
-        <DialogTrigger><Badge className='cursor-pointer'>Cancel Appointment</Badge></DialogTrigger>
+        <DialogTrigger><Badge className='cursor-pointer w-full hover:underline hover:text-red-500' variant="secondary">Cancel Appointment</Badge></DialogTrigger>
         <DialogContent>
             <h1 className='text-xl font-semibold'>Are you sure to cancel the appointment</h1>
             <div className='gap-2 flex'>
