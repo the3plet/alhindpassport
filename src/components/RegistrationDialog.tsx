@@ -1,10 +1,5 @@
 import { Select } from "@radix-ui/react-select";
-import {
-  Dialog,
-  DialogContent,
-  DialogTitle,
-  DialogTrigger,
-} from "./ui/dialog";
+import { Dialog, DialogContent, DialogTitle, DialogTrigger } from "./ui/dialog";
 import { Input } from "./ui/input";
 import { Label } from "./ui/label";
 import {
@@ -15,15 +10,11 @@ import {
 } from "./ui/select";
 import { Calendar } from "lucide-react";
 import { Button } from "./ui/button";
-
+import api from "../../data.json";
 
 const RegistrationDialog = () => {
-   
-        
-    
   return (
     <Dialog>
-      
       <DialogTrigger className="mt-4 w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-500 flex items-center justify-center gap-2">
         <Calendar size={20} />
         Schedule Appointment
@@ -33,7 +24,7 @@ const RegistrationDialog = () => {
         <DialogTitle className="font-semibold text-xl">
           Appointment Request Form
         </DialogTitle>
-        <form className="grid grid-cols-2 gap-6" >
+        <form className="grid grid-cols-2 gap-6">
           <div className="flex flex-col gap-1.5">
             <Label>Service Type</Label>
             <Select>
@@ -44,7 +35,9 @@ const RegistrationDialog = () => {
                 <SelectItem value="1">Passport</SelectItem>
                 <SelectItem value="2">Visa</SelectItem>
                 <SelectItem value="2">OCI</SelectItem>
-                <SelectItem value="2">Miscellaneous Consular Services</SelectItem>
+                <SelectItem value="2">
+                  Miscellaneous Consular Services
+                </SelectItem>
                 <SelectItem value="2">Attestation</SelectItem>
               </SelectContent>
             </Select>
@@ -57,11 +50,11 @@ const RegistrationDialog = () => {
                 <SelectValue placeholder="Select" />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="1">Colombo</SelectItem>
-                <SelectItem value="2">Kandy</SelectItem>
-                <SelectItem value="2">Jaffna</SelectItem>
-                <SelectItem value="2">Hambantota</SelectItem>
-                <SelectItem value="2">Batticaloa</SelectItem>
+                {api.locationList.map((loca, index) => (
+                  <SelectItem value={loca} key={index}>
+                    {loca}
+                  </SelectItem>
+                ))}
               </SelectContent>
             </Select>
           </div>

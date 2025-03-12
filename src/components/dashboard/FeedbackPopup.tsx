@@ -39,6 +39,7 @@ const FeedbackPopup = ({applicationNo}: Props) => {
                 <SelectValue placeholder="Select rating" />
               </SelectTrigger>
               <SelectContent>
+                <SelectItem value="good">Excellent</SelectItem>
                 <SelectItem value="good">Good</SelectItem>
                 <SelectItem value="average">Average</SelectItem>
                 <SelectItem value="poor">Poor</SelectItem>

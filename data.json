@@ -121,6 +121,22 @@
       "opening_hours": "08:00 - 14:00"
     }
   ],
+  "locationList": [
+    "Abu Dhabi (Al Khalidiya)",
+    "Abu Dhabi (Al Reem)",
+    "Abu Dhabi (Musaffah)",
+    "Al Ain",
+    "Ghyathi",
+    "Dubai (Bur Dubai)",
+    "Dubai (JLT/ Marina)",
+    "Sharjah (Al Majaz)",
+    "Ajman (Al Jerf)",
+    "Fujairah",
+    "Umm Al Quwain",
+    "Khor Fakkan (Corniche/ Subara)",
+    "Kalba",
+    "Ras Al Khaimah (Nakheel/ Khujan/ Mareed)"
+  ],
   "services": [
     {
       "id": 1,
