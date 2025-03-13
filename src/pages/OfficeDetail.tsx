@@ -1,5 +1,5 @@
 import React from "react";
-import { useParams } from "react-router";
+import { Link, useParams } from "react-router";
 import api from "..//../data.json";
 import { Button } from "@/components/ui/button";
 
@@ -12,6 +12,9 @@ const OfficeDetail = (props: Props) => {
     <div className="flex justify-between py-36">
       <div className="flex flex-col gap-10 pl-48">
         <div>
+          <Link to='/offices'>
+          <p className="pl-2 hover:underline cursor-pointer text-sm">Go back</p>
+          </Link>
           <h1 className="text-4xl font-sans">{office?.name}</h1>
           <p className="text-xl font-normal pt-4">This ePassport centre location has a total of {office?.no_of_counters} counter to visit.</p>
           <p className="text-lg font-normal">Opens from {office?.day}</p>

@@ -63,7 +63,7 @@ export default function Navbar() {
             </Link>
             {verified === "true" ? (
               <Link
-                to="/dashboard/appointment"
+                to="/dashboard"
                 className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium"
               >
                 Appointments

@@ -249,7 +249,7 @@ const ServiceDetail = (props: Props) => {
               </div>
             </form>
           </TabsContent>
-          <TabsContent value="Step by Step Guide">
+          <TabsContent value="Step by Step Guide" >
             <div>
               <div className="p-4 bg-gray-600 text-white font-semibold rounded-sm rounded-b-none">
                 <p className="text-sm">Apply in person</p>

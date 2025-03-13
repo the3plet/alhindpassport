@@ -33,14 +33,6 @@ const appointments = {
       time: "09:00 AM",
       status: "Confirmed",
     },
-    {
-      id: 4,
-      applicationNumber: "VISA34567",
-      title: "OCI Service",
-      date: "2025-03-18",
-      time: "01:00 PM",
-      status: "Pending",
-    },
   ],
   previous: [
     {
@@ -84,7 +76,7 @@ export default function UserAppointment() {
           <Card>
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
-                <Clock className="w-5 h-5 text-blue-500" /> Open Application
+                <Clock className="w-5 h-5 text-blue-500" /> Open Applications
               </CardTitle>
             </CardHeader>
             <CardContent>
@@ -139,14 +131,6 @@ export default function UserAppointment() {
                 >
                   <div>
                     <p className="font-semibold">{appt.title}</p>
-                    <p className="text-sm text-gray-500">
-                      Application No: {appt.applicationNumber}
-                    </p>
-                    <p className="text-sm text-gray-500">
-                      {appt.date} at {appt.time}
-                    </p>
-                  </div>
-                  <div className="flex flex-col gap-1.5">
                     <Badge
                       className={`rounded-full bg-white px-2 py-0.5 text-xs border ${
                         appt.status === "Completed"
@@ -156,6 +140,15 @@ export default function UserAppointment() {
                     >
                       {appt.status}
                     </Badge>
+                    <p className="text-sm text-gray-500">
+                      Application No: {appt.applicationNumber}
+                    </p>
+                    <p className="text-sm text-gray-500">
+                      {appt.date} at {appt.time}
+                    </p>
+                  </div>
+                  <div className="flex flex-col gap-1.5">
+                    <QrReceipt/>
                     <FeedbackPopup applicationNo={appt.applicationNumber} />
                   </div>
                 </div>

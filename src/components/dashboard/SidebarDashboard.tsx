@@ -145,17 +145,31 @@ import { DropdownMenu, DropdownMenuTrigger } from "../ui/dropdown-menu";
             <SidebarMenuItem>
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
+                  <div>
+
                   <SidebarMenuButton>
-                    <LogOut />{" "}
+                    <Home />
+                    <button
+                      className="w-full flex justify-start"
+                      onClick={()=>{window.location.replace('/')
+                      
+                      }}
+                      >
+                      Return to Home
+                    </button>
+                  </SidebarMenuButton>
+                  <SidebarMenuButton>
+                    <LogOut />
                     <button
                       className="w-full flex justify-start"
                       onClick={()=>{window.location.replace('/')
                         localStorage.removeItem("verified")
                       }}
-                    >
+                      >
                       Logout
                     </button>
                   </SidebarMenuButton>
+                      </div>
                 </DropdownMenuTrigger>
               </DropdownMenu>
             </SidebarMenuItem>
