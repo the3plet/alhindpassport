@@ -17,7 +17,7 @@ const FeeCard = () => {
 
   return (
     <div className=" bg-white  rounded-lg p-6 pt-1 border-gray-200">
-      <h2 className="text-xl font-bold text-gray-800 mb-4 text-center">
+      <h2 className="text-2xl rounded-sm rounded-b-none font-bold text-white bg-gray-600 py-4 mb-4 text-center">
         Fees
       </h2>
       <div className="space-y-2">

@@ -2,7 +2,7 @@ import React from "react";
 import api from "../../data.json";
 import { useParams } from "react-router";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { ArrowRight, Phone } from "lucide-react";
+import { ArrowRight, ExternalLink, Phone, TicketIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import {
@@ -20,6 +20,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import FeeCard from "@/components/FeeCard";
+import { Card, CardContent } from "@/components/ui/card";
 
 type Props = {};
 
@@ -55,7 +56,9 @@ const ServiceDetail = (props: Props) => {
 
           <TabsContent value="Check List" className="">
             <div className="p-2">
-              <h3 className="text-2xl font-bold mb-6">Document Checklist</h3>
+              <h3 className="flex justify-center py-4 rounded-sm rounded-b-none text-2xl font-bold mb-6 bg-gray-600 text-white">
+                Document Checklist
+              </h3>
               <ul className="space-y-4">
                 <li className="flex items-start gap-3">
                   <div className="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0 mt-1">
@@ -94,7 +97,10 @@ const ServiceDetail = (props: Props) => {
             </div>
           </TabsContent>
           <TabsContent value="Schedule an Appointment" className="py-5 px-2">
-            <form className="grid grid-cols-2 gap-6">
+            <h1 className="flex py-4 rounded-sm rounded-b-none justify-center items-center text-white text-2xl font-semibold bg-gray-600">
+              Schedule Appointment Form
+            </h1>
+            <form className="grid grid-cols-2 gap-6 pt-2">
               <div className="flex flex-col gap-1.5">
                 <Label>Service Type</Label>
                 <Select>
@@ -266,7 +272,76 @@ const ServiceDetail = (props: Props) => {
             </div>
           </TabsContent>
           <TabsContent value="Fee">
-            <FeeCard/>
+            <FeeCard />
+          </TabsContent>
+          <TabsContent value="Application Forms" >
+            <h1 className="flex justify-center items-center bg-gray-600 text-white text-2xl font-semibold py-4 rounded-sm rounded-b-none">Application Forms</h1>
+            <Card className="w-fit shadow-none border-none">
+              <CardContent className="flex w-fit gap-3.5 px-4 ">
+                <div className="flex justify-center items-center bg-gray-100 p-8 rounded-lg">
+                  <TicketIcon />
+                </div>
+                <div className="flex flex-col items-start justify-center">
+                  <h1 className="text-lg font-bold">
+                    Lorem, ipsum dolor sit amet consectetur
+                  </h1>
+                  <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Perspiciatis quibusdam,
+                    <br /> porro necessitatibus dolore impedit tenetur
+                  </p>
+                </div>
+                <div className="flex items-center">
+                  <Button className="h-6" variant={"outline"}>
+                    Visit <ExternalLink/>
+                  </Button>
+                </div>
+              </CardContent>
+            </Card>
+            <Card className="w-fit shadow-none border-none">
+              <CardContent className="flex w-fit gap-3.5 px-4 ">
+                <div className="flex justify-center items-center bg-gray-100 p-8 rounded-lg">
+                  <TicketIcon />
+                </div>
+                <div className="flex flex-col items-start justify-center">
+                  <h1 className="text-lg font-bold">
+                    Lorem, ipsum dolor sit amet consectetur
+                  </h1>
+                  <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Perspiciatis quibusdam,
+                    <br /> porro necessitatibus dolore impedit tenetur
+                  </p>
+                </div>
+                <div className="flex items-center">
+                  <Button className="h-6" variant={"outline"}>
+                    Visit <ExternalLink/>
+                  </Button>
+                </div>
+              </CardContent>
+            </Card>
+            <Card className="w-fit shadow-none border-none">
+              <CardContent className="flex w-fit gap-3.5 px-4 ">
+                <div className="flex justify-center items-center bg-gray-100 p-8 rounded-lg">
+                  <TicketIcon />
+                </div>
+                <div className="flex flex-col items-start justify-center">
+                  <h1 className="text-lg font-bold">
+                    Lorem, ipsum dolor sit amet consectetur
+                  </h1>
+                  <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Perspiciatis quibusdam,
+                    <br /> porro necessitatibus dolore impedit tenetur
+                  </p>
+                </div>
+                <div className="flex items-center">
+                  <Button className="h-6" variant={"outline"}>
+                    Visit <ExternalLink/>
+                  </Button>
+                </div>
+              </CardContent>
+            </Card>
           </TabsContent>
         </Tabs>
       </div>
