@@ -14,6 +14,8 @@ import Offices from "@/pages/Offices";
 import OfficeDetail from "@/pages/OfficeDetail";
 import ServiceDetail from "@/pages/ServiceDetail";
 import AboutUs from "@/pages/AboutUs";
+import AdminLayout from "@/pages/AdminPanel/AdminLayout";
+import AdminDashboard from "@/pages/AdminPanel/AdminDashboard";
 
 export const router = createBrowserRouter([
   {
@@ -30,7 +32,9 @@ export const router = createBrowserRouter([
     ],
   },
   { path: "login", element: <Login /> },
-  { path: "admin", element: <AdminHome /> },
+  { path: "admin", element: <AdminLayout /> ,children:[
+{path:'dashboard', element:<AdminDashboard/>},
+  ]},
   {
     path: "dashboard",
     element: <DashboardHome />,

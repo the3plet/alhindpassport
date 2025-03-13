@@ -57,10 +57,11 @@ const services: Service[] = [
 ];
 
 const Home = () => {
-  const authStatus = localStorage.getItem('verified')
-  const handleClick=()=>{
-!authStatus && toast.error("Access Denied, Login to Continue")
-  }
+  const authStatus = localStorage.getItem("verified");
+  console.log(authStatus)
+  const handleClick = () => {
+    !authStatus && toast.error("Access Denied, Login to Continue");
+  };
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section with Carousel */}
@@ -71,9 +72,10 @@ const Home = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center gap-2 text-red-700 mb-2">
             <AlertTriangle size={24} />
-            <h2 className="text-xl font-bold">This website is only for demostration purposes</h2>
+            <h2 className="text-xl font-bold">
+              This website is only for demostration purposes
+            </h2>
           </div>
-          
         </div>
       </section>
 
@@ -83,7 +85,7 @@ const Home = () => {
           <h2 className="text-3xl font-bold text-center mb-12">Our Services</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service) => (
-              <ServiceCard key={service.id} service={service}/>
+              <ServiceCard key={service.id} service={service} />
             ))}
           </div>
         </div>
@@ -95,32 +97,36 @@ const Home = () => {
           <h2 className="text-3xl font-bold text-center mb-12">Quick Links</h2>
           <div
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 cursor-pointer"
-            onClick={handleClick}
+            
           >
-            <Link to='/offices'>
-            <div className="bg-white p-6 rounded-lg shadow hover:shadow-md transition-shadow text-center">
-              <MapPin className="w-8 h-8 mx-auto mb-4 text-blue-600" />
-              <h3 className="font-semibold mb-2">ICAC Offices</h3>
-              <p className="text-gray-600">Find your nearest ICAC office for appointment.</p>
-            </div>
+            <Link to="/offices">
+              <div className="bg-white p-6 rounded-lg shadow hover:shadow-md transition-shadow text-center">
+                <MapPin className="w-8 h-8 mx-auto mb-4 text-blue-600" />
+                <h3 className="font-semibold mb-2">ICAC Offices</h3>
+                <p className="text-gray-600">
+                  Find your nearest ICAC office for appointment.
+                </p>
+              </div>
             </Link>
-            <Link to={authStatus ? '/dashboard/track' : '#'}>
-            <div className="bg-white p-6 rounded-lg shadow hover:shadow-md transition-shadow text-center">
-              <FileText className="w-8 h-8 mx-auto mb-4 text-blue-600" />
-              <h3 className="font-semibold mb-2">Track Application</h3>
-              <p className="text-gray-600">Check your current application status</p>
-            </div>
+            <Link to={authStatus ? "/dashboard/track" : "#"} onClick={handleClick}>
+              <div className="bg-white p-6 rounded-lg shadow hover:shadow-md transition-shadow text-center">
+                <FileText className="w-8 h-8 mx-auto mb-4 text-blue-600" />
+                <h3 className="font-semibold mb-2">Track Application</h3>
+                <p className="text-gray-600">
+                  Check your current application status
+                </p>
+              </div>
             </Link>
-            <Link to={authStatus ? '/dashboard/appointment': '#'}>
-            <div className="bg-white p-6 rounded-lg shadow hover:shadow-md transition-shadow text-center">
-              <Users className="w-8 h-8 mx-auto mb-4 text-blue-600" />
-              <h3 className="font-semibold mb-2">Appointment</h3>
-              <p className="text-gray-600">
-                Schedule or reschedule appointment
-              </p>
-            </div>
+            <Link to={authStatus ? "/dashboard" : "#"} onClick={handleClick}>
+              <div className="bg-white p-6 rounded-lg shadow hover:shadow-md transition-shadow text-center">
+                <Users className="w-8 h-8 mx-auto mb-4 text-blue-600" />
+                <h3 className="font-semibold mb-2">Appointment</h3>
+                <p className="text-gray-600">
+                  Schedule or reschedule appointment
+                </p>
+              </div>
             </Link>
-            <Link to='faq'>
+            <Link to="faq">
               <div className="bg-white p-6 rounded-lg shadow hover:shadow-md transition-shadow text-center">
                 <HelpCircle className="w-8 h-8 mx-auto mb-4 text-blue-600" />
                 <h3 className="font-semibold mb-2">FAQs</h3>
@@ -134,7 +140,7 @@ const Home = () => {
       </section>
 
       {/* Document Checklist & Information */}
-<section className="py-16">
+      <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="bg-white p-8 rounded-lg shadow">
@@ -199,7 +205,7 @@ const Home = () => {
               </div>
             </div>
           </div>
-        </div>      
+        </div>
       </section>
     </div>
   );
