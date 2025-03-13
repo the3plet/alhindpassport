@@ -13,7 +13,6 @@ import AdminHome from "@/pages/AdminPanel/AdminHome";
 import Offices from "@/pages/Offices";
 import OfficeDetail from "@/pages/OfficeDetail";
 import ServiceDetail from "@/pages/ServiceDetail";
-import DashboardProfile from "@/pages/dashboard/DashboardProfile";
 import AboutUs from "@/pages/AboutUs";
 
 export const router = createBrowserRouter([
@@ -36,11 +35,10 @@ export const router = createBrowserRouter([
     path: "dashboard",
     element: <DashboardHome />,
     children: [
-      {index:true, element:<DashboardProfile/>},
       { path: "service", element: <UserServices /> },
       { path: "reshedule", element: <UserReshedule /> },
       { path: "track", element: <UserTrack /> },
-      { path: "appointment", element: <UserAppointment /> },
+      { index:true , element: <UserAppointment /> },
     ],
   },
 ]);

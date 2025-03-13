@@ -2,11 +2,24 @@ import React from "react";
 import api from "../../data.json";
 import { useParams } from "react-router";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Phone } from "lucide-react";
+import { ArrowRight, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import { Label } from "@/components/ui/label";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+import FeeCard from "@/components/FeeCard";
 
 type Props = {};
 
@@ -41,7 +54,7 @@ const ServiceDetail = (props: Props) => {
           </TabsList>
 
           <TabsContent value="Check List" className="">
-            <div className="bg-white p-8 rounded-lg shadow">
+            <div className="p-2">
               <h3 className="text-2xl font-bold mb-6">Document Checklist</h3>
               <ul className="space-y-4">
                 <li className="flex items-start gap-3">
@@ -81,133 +94,179 @@ const ServiceDetail = (props: Props) => {
             </div>
           </TabsContent>
           <TabsContent value="Schedule an Appointment" className="py-5 px-2">
-          <form className="grid grid-cols-2 gap-6" >
-          <div className="flex flex-col gap-1.5">
-            <Label>Service Type</Label>
-            <Select>
-              <SelectTrigger className="w-full">
-                <SelectValue placeholder="Select" />
-              </SelectTrigger>
-              <SelectContent>
-                <SelectItem value="1">Passport</SelectItem>
-                <SelectItem value="2">Visa</SelectItem>
-                <SelectItem value="2">OCI</SelectItem>
-                <SelectItem value="2">Miscellaneous Consular Services</SelectItem>
-                <SelectItem value="2">Attestation</SelectItem>
-              </SelectContent>
-            </Select>
-          </div>
+            <form className="grid grid-cols-2 gap-6">
+              <div className="flex flex-col gap-1.5">
+                <Label>Service Type</Label>
+                <Select>
+                  <SelectTrigger className="w-full">
+                    <SelectValue placeholder="Select" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="1">Passport</SelectItem>
+                    <SelectItem value="2">Visa</SelectItem>
+                    <SelectItem value="2">OCI</SelectItem>
+                    <SelectItem value="2">
+                      Miscellaneous Consular Services
+                    </SelectItem>
+                    <SelectItem value="2">Attestation</SelectItem>
+                  </SelectContent>
+                </Select>
+              </div>
 
-          <div className="flex flex-col gap-1.5">
-            <Label>Center Location</Label>
-            <Select>
-              <SelectTrigger className="w-full">
-                <SelectValue placeholder="Select" />
-              </SelectTrigger>
-              <SelectContent>
-                {api.locationList.map((loca, index) => (
-                  <SelectItem value={loca} key={index}>
-                    {loca}
-                  </SelectItem>
+              <div className="flex flex-col gap-1.5">
+                <Label>Center Location</Label>
+                <Select>
+                  <SelectTrigger className="w-full">
+                    <SelectValue placeholder="Select" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    {api.locationList.map((loca, index) => (
+                      <SelectItem value={loca} key={index}>
+                        {loca}
+                      </SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
+              </div>
+
+              <div className="flex flex-col gap-1.5">
+                <Label>Appointment Date</Label>
+                <Input type="date" className="w-full" />
+              </div>
+
+              <div className="flex flex-col gap-1.5">
+                <Label>Appointment Slot</Label>
+                <Select>
+                  <SelectTrigger className="w-full">
+                    <SelectValue placeholder="Select" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="1" disabled>
+                      9AM
+                    </SelectItem>
+                    <SelectItem value="2">10AM</SelectItem>
+                    <SelectItem value="3">11AM</SelectItem>
+                    <SelectItem value="4">12PM</SelectItem>
+                    <SelectItem value="5" disabled>
+                      2PM
+                    </SelectItem>
+                    <SelectItem value="6">3PM</SelectItem>
+                    <SelectItem value="7" disabled>
+                      4PM
+                    </SelectItem>
+                    <SelectItem value="8">5PM</SelectItem>
+                  </SelectContent>
+                </Select>
+              </div>
+
+              <div className="flex flex-col gap-1.5">
+                <Label>Given Name</Label>
+                <Input
+                  type="text"
+                  className="w-full"
+                  placeholder="Enter given name"
+                />
+              </div>
+
+              <div className="flex flex-col gap-1.5">
+                <Label>Surname</Label>
+                <Input
+                  type="text"
+                  className="w-full"
+                  placeholder="Enter surname"
+                />
+              </div>
+
+              <div className="flex flex-col gap-1.5">
+                <Label>Residential Contact Number</Label>
+                <Input
+                  type="number"
+                  className="w-full"
+                  placeholder="Enter contact number"
+                />
+              </div>
+
+              <div className="flex flex-col gap-1.5">
+                <Label>Contact Number - India</Label>
+                <Input
+                  type="number"
+                  className="w-full"
+                  placeholder="Enter India number"
+                />
+              </div>
+
+              <div className="flex flex-col gap-1.5">
+                <Label>Passport Number</Label>
+                <Input
+                  type="text"
+                  className="w-full"
+                  placeholder="Enter passport number"
+                />
+              </div>
+
+              <div className="flex flex-col gap-1.5">
+                <Label>Application Email</Label>
+                <Input
+                  type="email"
+                  className="w-full"
+                  placeholder="Enter email"
+                />
+              </div>
+
+              <div className="col-span-2 flex flex-col gap-1.5">
+                <Label>Service Description</Label>
+                <Input
+                  type="text"
+                  className="w-full"
+                  placeholder="Describe the service"
+                />
+              </div>
+
+              <div className="col-span-2 flex justify-center gap-1.5">
+                <Button
+                  className="w-full bg-blue-600 hover:bg-blue-500 text-white py-2"
+                  type="submit"
+                >
+                  Submit
+                </Button>
+              </div>
+            </form>
+          </TabsContent>
+          <TabsContent value="Step by Step Guide">
+            <div>
+              <div className="p-4 bg-gray-600 text-white font-semibold rounded-sm rounded-b-none">
+                <p className="text-sm">Apply in person</p>
+                <h2 className="text-2xl">Step by Step guide</h2>
+              </div>
+              <Accordion type="single" collapsible className="px-6">
+                {api.application_steps.map((step) => (
+                  <AccordionItem key={step.id} value={step.title}>
+                    <AccordionTrigger className=" text-lg cursor-pointer ">
+                      <div className="flex justify-start gap-2">
+                        <p className="flex justify-center items-center bg-gray-200 rounded-full w-7">
+                          {step.id}
+                        </p>
+                        <p>{step.title}</p>
+                      </div>
+                    </AccordionTrigger>
+                    <AccordionContent className="p-4 pt-0">
+                      <div className="space-y-2">
+                        <p>{step.description}</p>
+                        <Button
+                          variant={"outline"}
+                          className="text-xs p-0 h-6 px-2 gap-1"
+                        >
+                          View More <ArrowRight size={30} />
+                        </Button>
+                      </div>
+                    </AccordionContent>
+                  </AccordionItem>
                 ))}
-              </SelectContent>
-            </Select>
-          </div>
-
-          <div className="flex flex-col gap-1.5">
-            <Label>Appointment Date</Label>
-            <Input type="date" className="w-full" />
-          </div>
-
-          <div className="flex flex-col gap-1.5">
-            <Label>Appointment Slot</Label>
-            <Select>
-              <SelectTrigger className="w-full">
-                <SelectValue placeholder="Select" />
-              </SelectTrigger>
-              <SelectContent>
-                <SelectItem value="1" disabled>
-                  9AM
-                </SelectItem>
-                <SelectItem value="2">10AM</SelectItem>
-                <SelectItem value="3">11AM</SelectItem>
-                <SelectItem value="4">12PM</SelectItem>
-                <SelectItem value="5" disabled>
-                  2PM
-                </SelectItem>
-                <SelectItem value="6">3PM</SelectItem>
-                <SelectItem value="7" disabled>
-                  4PM
-                </SelectItem>
-                <SelectItem value="8">5PM</SelectItem>
-              </SelectContent>
-            </Select>
-          </div>
-
-          <div className="flex flex-col gap-1.5">
-            <Label>Given Name</Label>
-            <Input
-              type="text"
-              className="w-full"
-              placeholder="Enter given name"
-            />
-          </div>
-
-          <div className="flex flex-col gap-1.5">
-            <Label>Surname</Label>
-            <Input type="text" className="w-full" placeholder="Enter surname" />
-          </div>
-
-          <div className="flex flex-col gap-1.5">
-            <Label>Residential Contact Number</Label>
-            <Input
-              type="number"
-              className="w-full"
-              placeholder="Enter contact number"
-            />
-          </div>
-
-          <div className="flex flex-col gap-1.5">
-            <Label>Contact Number - India</Label>
-            <Input
-              type="number"
-              className="w-full"
-              placeholder="Enter India number"
-            />
-          </div>
-
-          <div className="flex flex-col gap-1.5">
-            <Label>Passport Number</Label>
-            <Input
-              type="text"
-              className="w-full"
-              placeholder="Enter passport number"
-            />
-          </div>
-
-          <div className="flex flex-col gap-1.5">
-            <Label>Application Email</Label>
-            <Input type="email" className="w-full" placeholder="Enter email" />
-          </div>
-
-          <div className="col-span-2 flex flex-col gap-1.5">
-            <Label>Service Description</Label>
-            <Input
-              type="text"
-              className="w-full"
-              placeholder="Describe the service"
-            />
-          </div>
-
-          <div className="col-span-2 flex justify-center gap-1.5">
-            <Button
-              className="w-full bg-blue-600 hover:bg-blue-500 text-white py-2"
-              type="submit"
-            >
-              Submit
-            </Button>
-          </div>
-        </form>
+              </Accordion>
+            </div>
+          </TabsContent>
+          <TabsContent value="Fee">
+            <FeeCard/>
           </TabsContent>
         </Tabs>
       </div>

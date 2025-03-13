@@ -191,7 +191,7 @@
       ]
     }
   ],
-  "visa_application_steps": [
+  "application_steps": [
     {
       "id": 1,
       "title": "Identify visa type",

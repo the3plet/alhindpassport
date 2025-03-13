@@ -5,6 +5,7 @@ import FeedbackPopup from "@/components/dashboard/FeedbackPopup";
 import CancellationPopup from "@/components/dashboard/CancellationPopup";
 import { useNavigate } from "react-router";
 import { Breadcrumb, BreadcrumbItem, BreadcrumbList, BreadcrumbPage, BreadcrumbSeparator } from "@/components/ui/breadcrumb";
+import QrReceipt from "@/components/dashboard/BarcodeReceipt";
 
 const appointments = {
   upcoming: [
@@ -64,9 +65,7 @@ const appointments = {
 export default function UserAppointment() {
   const navigate =useNavigate()
   return (
-    <div className=" mt-20 ">
-      <div className="pl-2">
-
+    <div className="mt-4 ml-4 ">
 <Breadcrumb>
   <BreadcrumbList>
     <BreadcrumbItem>Dashboard</BreadcrumbItem>
@@ -77,6 +76,8 @@ export default function UserAppointment() {
     </BreadcrumbItem>
   </BreadcrumbList>
 </Breadcrumb>
+      <div className="pl-2">
+
 </div>
       <div className="p-6 grid grid-cols-1 md:grid-cols-2 gap-6 ">
         <section>
@@ -111,7 +112,7 @@ export default function UserAppointment() {
                     </p>
                   </div>
                   <div className="flex flex-col gap-1.5">
-                    <Badge className="cursor-pointer w-full hover:underline" variant="outline">View Receipt</Badge>
+                    <QrReceipt/>
                     {/* <Badge className="cursor-pointer w-full" variant="outline">Track Appointment</Badge> */}
                     <Badge className="cursor-pointer w-full hover:underline" variant="outline" onClick={()=>navigate('/dashboard/reshedule')}>Reschedule Appointment</Badge>
                     <CancellationPopup />
