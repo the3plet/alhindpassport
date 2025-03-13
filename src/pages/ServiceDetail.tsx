@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import api from "../../data.json";
 import { useParams } from "react-router";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -21,15 +21,26 @@ import {
 } from "@/components/ui/accordion";
 import FeeCard from "@/components/FeeCard";
 import { Card, CardContent } from "@/components/ui/card";
+import { toast } from "sonner";
 
 type Props = {};
 
 const ServiceDetail = (props: Props) => {
+  const [valuetab,setValueTab] = useState('')
+  const [disabled,setDisabled]= useState<boolean>()
   const { id } = useParams();
   const allservices = api.services.find(
     (service) => service.name.toLowerCase() === id
   );
+  const verified = localStorage.getItem("verified")
   console.log(allservices);
+
+  useEffect(()=>{
+    if(valuetab ==="Schedule an Appointment"){
+      verified !=="true" && toast.error("Unauthorized to perform action. Please login to submit a new appointment") && setDisabled(true)
+    
+    }
+  })
 
   return (
     <div className="">
@@ -40,7 +51,7 @@ const ServiceDetail = (props: Props) => {
       <div className="px-28 py-14">
         <Tabs
           defaultValue={allservices?.details[0].title}
-          className="flex flex-row shadow-lg rounded-xl"
+          className="flex flex-row shadow-lg rounded-xl" onValueChange={setValueTab} value={valuetab}
         >
           <TabsList className="flex flex-col h-full">
             {allservices?.details.map((ser) => (
@@ -96,7 +107,7 @@ const ServiceDetail = (props: Props) => {
               </ul>
             </div>
           </TabsContent>
-          <TabsContent value="Schedule an Appointment" className="py-5 px-2">
+          <TabsContent value="Schedule an Appointment"  className="py-5 px-2">
             <h1 className="flex py-4 rounded-sm rounded-b-none justify-center items-center text-white text-2xl font-semibold bg-gray-600">
               Schedule Appointment Form
             </h1>
@@ -110,11 +121,11 @@ const ServiceDetail = (props: Props) => {
                   <SelectContent>
                     <SelectItem value="1">Passport</SelectItem>
                     <SelectItem value="2">Visa</SelectItem>
-                    <SelectItem value="2">OCI</SelectItem>
-                    <SelectItem value="2">
+                    <SelectItem value="3">OCI</SelectItem>
+                    <SelectItem value="4">
                       Miscellaneous Consular Services
                     </SelectItem>
-                    <SelectItem value="2">Attestation</SelectItem>
+                    <SelectItem value="5">Attestation</SelectItem>
                   </SelectContent>
                 </Select>
               </div>
@@ -231,9 +242,9 @@ const ServiceDetail = (props: Props) => {
               <div className="col-span-2 flex justify-center gap-1.5">
                 <Button
                   className="w-full bg-blue-600 hover:bg-blue-500 text-white py-2"
-                  type="submit"
+                  type="button" disabled={disabled}
                 >
-                  Submit
+                  {disabled ? 'Login for submiting the appointment' : 'Submit'}
                 </Button>
               </div>
             </form>

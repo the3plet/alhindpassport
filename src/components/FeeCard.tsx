@@ -20,7 +20,7 @@ const FeeCard = () => {
       <h2 className="text-2xl rounded-sm rounded-b-none font-bold text-white bg-gray-600 py-4 mb-4 text-center">
         Fees
       </h2>
-      <div className="space-y-2">
+      <div className="space-y-2 px-4">
         <div className="flex justify-between">
           <span>Consular Fee:</span>
           <span>AED{paymentDetails.consularFee}</span>
