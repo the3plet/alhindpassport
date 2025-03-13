@@ -40,7 +40,7 @@ const ServiceDetail = (props: Props) => {
       verified !=="true" && toast.error("Unauthorized to perform action. Please login to submit a new appointment") && setDisabled(true)
     
     }
-  })
+  },[valuetab,verified])
 
   return (
     <div className="">
@@ -51,7 +51,7 @@ const ServiceDetail = (props: Props) => {
       <div className="px-28 py-14">
         <Tabs
           defaultValue={allservices?.details[0].title}
-          className="flex flex-row shadow-lg rounded-xl" onValueChange={setValueTab} value={valuetab}
+          className="flex flex-row shadow-lg rounded-xl" onValueChange={setValueTab}
         >
           <TabsList className="flex flex-col h-full">
             {allservices?.details.map((ser) => (

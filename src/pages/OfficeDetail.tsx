@@ -2,6 +2,7 @@ import React from "react";
 import { Link, useParams } from "react-router";
 import api from "..//../data.json";
 import { Button } from "@/components/ui/button";
+import { ArrowLeft } from "lucide-react";
 
 type Props = {};
 
@@ -12,8 +13,9 @@ const OfficeDetail = (props: Props) => {
     <div className="flex justify-between py-36">
       <div className="flex flex-col gap-10 pl-48">
         <div>
-          <Link to='/offices'>
-          <p className="pl-2 hover:underline cursor-pointer text-sm">Go back</p>
+          <Link to='/offices' className="flex items-center gap-0.5">
+          <ArrowLeft size={15} className="h-5"/>
+          <p className="pb-0.5 hover:underline cursor-pointer text-sm">Back to list</p>
           </Link>
           <h1 className="text-4xl font-sans">{office?.name}</h1>
           <p className="text-xl font-normal pt-4">This ePassport centre location has a total of {office?.no_of_counters} counter to visit.</p>

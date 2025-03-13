@@ -101,7 +101,7 @@ const Home = () => {
             <div className="bg-white p-6 rounded-lg shadow hover:shadow-md transition-shadow text-center">
               <MapPin className="w-8 h-8 mx-auto mb-4 text-blue-600" />
               <h3 className="font-semibold mb-2">ICAC Offices</h3>
-              <p className="text-gray-600">Find your's nearest ICAC office.</p>
+              <p className="text-gray-600">Find your nearest ICAC office for appointment.</p>
             </div>
             </Link>
             <Link to={authStatus ? '/dashboard/track' : '#'}>
