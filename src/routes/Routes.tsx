@@ -16,6 +16,7 @@ import ServiceDetail from "@/pages/ServiceDetail";
 import AboutUs from "@/pages/AboutUs";
 import AdminLayout from "@/pages/AdminPanel/AdminLayout";
 import AdminDashboard from "@/pages/AdminPanel/AdminDashboard";
+import AdminAppointment from "@/pages/AdminPanel/AdminAppointment";
 
 export const router = createBrowserRouter([
   {
@@ -32,9 +33,14 @@ export const router = createBrowserRouter([
     ],
   },
   { path: "login", element: <Login /> },
-  { path: "admin", element: <AdminLayout /> ,children:[
-{path:'dashboard', element:<AdminDashboard/>},
-  ]},
+  {
+    path: "admin",
+    element: <AdminLayout />,
+    children: [
+      { path: "dashboard", element: <AdminDashboard /> },
+      { path: "appointment", element: <AdminAppointment /> },
+    ],
+  },
   {
     path: "dashboard",
     element: <DashboardHome />,
@@ -42,7 +48,7 @@ export const router = createBrowserRouter([
       { path: "service", element: <UserServices /> },
       { path: "reshedule", element: <UserReshedule /> },
       { path: "track", element: <UserTrack /> },
-      { index:true , element: <UserAppointment /> },
+      { index: true, element: <UserAppointment /> },
     ],
   },
 ]);

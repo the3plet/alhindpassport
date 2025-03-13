@@ -9,6 +9,7 @@ import {
     LayoutDashboard,
     ListCollapse,
     LogOut,
+    MessagesSquare,
     Settings2,
     Shield,
     TimerReset,
@@ -52,6 +53,11 @@ import { DropdownMenu, DropdownMenuTrigger } from "../ui/dropdown-menu";
           title: "Dashboard",
           url: "/admin/dashboard",
           icon: ListCollapse,
+        },
+        {
+          title: "Appointments",
+          url: "/admin/appointment",
+          icon: MessagesSquare,
         },
         
       ], // no sub-items for this one

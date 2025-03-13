@@ -109,7 +109,7 @@ const ServiceDetail = (props: Props) => {
           </TabsContent>
           <TabsContent value="Schedule an Appointment"  className="py-5 px-2">
             <h1 className="flex py-4 rounded-sm rounded-b-none justify-center items-center text-white text-2xl font-semibold bg-gray-600">
-              Schedule Appointment Form
+              Schedule an Appointment
             </h1>
             <form className="grid grid-cols-2 gap-6 pt-2">
               <div className="flex flex-col gap-1.5">
