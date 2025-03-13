@@ -112,7 +112,9 @@ export default function UserAppointment() {
                     <QRCodeSVG value={appt.applicationNumber} size={70}/>
                   </div>
                   <div className="flex flex-col gap-1.5">
+                    {appt.status !="Pending" && 
                     <QrReceipt />
+                    }
                     {/* <Badge className="cursor-pointer w-full" variant="outline">Track Appointment</Badge> */}
                     <Badge
                       className="cursor-pointer w-full hover:underline"
