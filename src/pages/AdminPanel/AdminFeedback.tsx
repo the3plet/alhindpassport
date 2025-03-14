@@ -1,14 +1,20 @@
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table'
 import React from 'react'
 import api from '../../../data.json'
+import { Input } from '@/components/ui/input'
 
 type Props = {}
 
 const AdminFeedback = (props: Props) => {
   return (
-    <div className='p-14 shadow-xl rounded-2xl m-4'>
+    <div className='p-7 shadow border rounded-2xl m-4'>
+<div className='flex justify-between'>
+
         <h1 className='text-2xl font-semibold pb-2'>User Feedback</h1>
-        <Table className='border rounded-xl'>
+        <Input className=' max-w-xs text-black' placeholder='Search Feedback' />
+</div>
+
+        <Table className=' rounded-xl'>
             <TableHeader>
                 <TableRow>
                     <TableHead>Application No</TableHead>

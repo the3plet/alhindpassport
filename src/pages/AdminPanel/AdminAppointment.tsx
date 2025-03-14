@@ -21,7 +21,7 @@ const AdminAppointment = (props: Props) => {
     <Card className=" text-neutral-100 m-4 gap-2">
     <CardHeader className=' flex flex-row justify-between'>
       <CardTitle className="flex items-center text-2xl text-black">Appointments</CardTitle>
-      <Input className=' max-w-xs text-black' placeholder='Search Appointments'  />
+      <Input className=' max-w-xs text-black' placeholder='Search Appointments' />
     </CardHeader>
     <CardContent>
       <Table>

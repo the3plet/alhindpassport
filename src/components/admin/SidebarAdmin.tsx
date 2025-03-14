@@ -52,7 +52,7 @@ import { DropdownMenu, DropdownMenuTrigger } from "../ui/dropdown-menu";
         
         {
           title: "Dashboard",
-          url: "/admin/dashboard",
+          url: "/admin",
           icon: ListCollapse,
         },
         {
