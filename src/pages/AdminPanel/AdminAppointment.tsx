@@ -4,6 +4,8 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table'
 import React, { useState } from 'react'
 import api from '../../../data.json'
+import { Input } from '@/components/ui/input'
+import { Search } from 'lucide-react'
 
 type Props = {}
 
@@ -16,9 +18,10 @@ const AdminAppointment = (props: Props) => {
     const currentItems = api.adminpanel.appointments.slice(indexOfFirstItem, indexOfLastItem);
     const totalPages = Math.ceil(api.adminpanel.appointments.length / api.adminpanel.itemsPerPage);
   return (
-    <Card className=" text-neutral-100 m-4">
-    <CardHeader>
-      <CardTitle className="text-black">Appointments</CardTitle>
+    <Card className=" text-neutral-100 m-4 gap-2">
+    <CardHeader className=' flex flex-row justify-between'>
+      <CardTitle className="flex items-center text-2xl text-black">Appointments</CardTitle>
+      <Input className=' max-w-xs text-black' placeholder='Search Appointments'  />
     </CardHeader>
     <CardContent>
       <Table>

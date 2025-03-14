@@ -17,6 +17,7 @@ import AboutUs from "@/pages/AboutUs";
 import AdminLayout from "@/pages/AdminPanel/AdminLayout";
 import AdminDashboard from "@/pages/AdminPanel/AdminDashboard";
 import AdminAppointment from "@/pages/AdminPanel/AdminAppointment";
+import AdminFeedback from "@/pages/AdminPanel/AdminFeedback";
 
 export const router = createBrowserRouter([
   {
@@ -39,6 +40,7 @@ export const router = createBrowserRouter([
     children: [
       { path: "dashboard", element: <AdminDashboard /> },
       { path: "appointment", element: <AdminAppointment /> },
+      { path: "feedback", element: <AdminFeedback /> },
     ],
   },
   {

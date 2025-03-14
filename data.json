@@ -283,6 +283,98 @@
       }
     ]
   },
+  "feedback": [
+      {
+        "Application_no": "ABU202400001",
+        "Name": "John Smith",
+        "Email": "john.smith@example.com",
+        "Service": "Passport Renewal",
+        "Location": "Abu Dhabi",
+        "Status": "Excellent",
+        "Feedback_comment": "Excellent service, very efficient."
+      },
+      {
+        "Application_no": "DXB202400002",
+        "Name": "Aisha Khan",
+        "Email": "aisha.khan@example.com",
+        "Service": "Visa Application",
+        "Location": "Dubai",
+        "Status": "Good",
+        "Feedback_comment": "Good service, but waiting time was a bit long."
+      },
+      {
+        "Application_no": "ABU202400003",
+        "Name": "David Lee",
+        "Email": "david.lee@example.com",
+        "Service": "OCI Application",
+        "Location": "Abu Dhabi",
+        "Status": "Average",
+        "Feedback_comment": "Service was okay, some confusion with documents."
+      },
+      {
+        "Application_no": "DXB202400004",
+        "Name": "Fatima Ali",
+        "Email": "fatima.ali@example.com",
+        "Service": "PCC",
+        "Location": "Dubai",
+        "Status": "Excellent",
+        "Feedback_comment": "Very helpful staff and quick processing."
+      },
+      {
+        "Application_no": "ABU202400005",
+        "Name": "Michael Brown",
+        "Email": "michael.brown@example.com",
+        "Service": "Attestation",
+        "Location": "Abu Dhabi",
+        "Status": "Good",
+        "Feedback_comment": "Smooth process, clear instructions."
+      },
+      {
+        "Application_no": "DXB202400006",
+        "Name": "Sarah Jones",
+        "Email": "sarah.jones@example.com",
+        "Service": "Passport Renewal",
+        "Location": "Dubai",
+        "Status": "Excellent",
+        "Feedback_comment": "Fast and efficient, highly recommended."
+      },
+      {
+        "Application_no": "ABU202400007",
+        "Name": "Ahmed Hassan",
+        "Email": "ahmed.hassan@example.com",
+        "Service": "Visa Application",
+        "Location": "Abu Dhabi",
+        "Status": "Average",
+        "Feedback_comment": "Average service, could improve communication."
+      },
+      {
+        "Application_no": "DXB202400008",
+        "Name": "Li Wei",
+        "Email": "li.wei@example.com",
+        "Service": "OCI Application",
+        "Location": "Dubai",
+        "Status": "Good",
+        "Feedback_comment": "Good experience overall, staff was polite."
+      },
+      {
+        "Application_no": "ABU202400009",
+        "Name": "Maria Garcia",
+        "Email": "maria.garcia@example.com",
+        "Service": "PCC",
+        "Location": "Abu Dhabi",
+        "Status": "Excellent",
+        "Feedback_comment": "Very satisfied with the service."
+      },
+      {
+        "Application_no": "DXB202400010",
+        "Name": "Raj Patel",
+        "Email": "raj.patel@example.com",
+        "Service": "Attestation",
+        "Location": "Dubai",
+        "Status": "Good",
+        "Feedback_comment": "Quick and hassle-free process."
+      }
+    ],
   "adminpanel": {
     "locationData": [
       { "name": "Passport", "count": 4 },
@@ -295,21 +387,139 @@
       { "name": "Attestation", "value": 1 }
     ],
     "appointments": [
-      { "id": 1, "applicationNo": "C060325-0001", "fullName": "John Smith", "service": "Passport", "appointmentDate": "15-02-2025", "status": "In progress", "location": "Colombo", "fee": 200 },
-      { "id": 2, "applicationNo": "C060325-0002", "fullName": "Aisha Khan", "service": "Passport", "appointmentDate": "09-03-2025", "status": "scheduled", "location": "Colombo", "fee": 200 },
-      { "id": 3, "applicationNo": "C060325-0003", "fullName": "David Lee", "service": "Passport", "appointmentDate": "10-03-2025", "status": "scheduled", "location": "Colombo", "fee": 200 },
-      { "id": 4, "applicationNo": "C060325-0004", "fullName": "Fathima Ali", "service": "Passport", "appointmentDate": "11-03-2025", "status": "scheduled", "location": "Colombo", "fee": 200 },
-      { "id": 5, "applicationNo": "C060325-0005", "fullName": "Michael Brown", "service": "Passport", "appointmentDate": "12-03-2025", "status": "scheduled", "location": "Colombo", "fee": 200 },
-      { "id": 6, "applicationNo": "C060325-0006", "fullName": "Sarah Jones", "service": "Attestation", "appointmentDate": "13-03-2025", "status": "scheduled", "location": "Colombo", "fee": 150 },
-      { "id": 7, "applicationNo": "C060325-0007", "fullName": "Raj Patel", "service": "Passport", "appointmentDate": "14-03-2025", "status": "scheduled", "location": "Colombo", "fee": 200 },
-      { "id": 8, "applicationNo": "K060325-0001", "fullName": "Anil Kumar", "service": "Passport", "appointmentDate": "15-03-2025", "status": "scheduled", "location": "Kandy", "fee": 200 },
-      { "id": 9, "applicationNo": "K060325-0002", "fullName": "Sajesh Keloth", "service": "Passport", "appointmentDate": "16-03-2025", "status": "scheduled", "location": "Kandy", "fee": 200 },
-      { "id": 10, "applicationNo": "K060325-0003", "fullName": "Anil Dev", "service": "Passport", "appointmentDate": "17-03-2025", "status": "scheduled", "location": "Kandy", "fee": 200 },
-      { "id": 11, "applicationNo": "K060325-0004", "fullName": "Shanil Mon", "service": "OCI", "appointmentDate": "18-03-2025", "status": "scheduled", "location": "Kandy", "fee": 150 },
-      { "id": 12, "applicationNo": "K060325-0005", "fullName": "Jeena Vijay", "service": "Passport", "appointmentDate": "19-03-2025", "status": "scheduled", "location": "Kandy", "fee": 200 },
-      { "id": 13, "applicationNo": "K060325-0006", "fullName": "Ajith Kishore", "service": "Passport", "appointmentDate": "20-03-2025", "status": "scheduled", "location": "Kandy", "fee": 200 }
+      {
+        "id": 1,
+        "applicationNo": "C060325-0001",
+        "fullName": "John Smith",
+        "service": "Passport",
+        "appointmentDate": "15-02-2025",
+        "status": "In progress",
+        "location": "Colombo",
+        "fee": 200
+      },
+      {
+        "id": 2,
+        "applicationNo": "C060325-0002",
+        "fullName": "Aisha Khan",
+        "service": "Passport",
+        "appointmentDate": "09-03-2025",
+        "status": "scheduled",
+        "location": "Colombo",
+        "fee": 200
+      },
+      {
+        "id": 3,
+        "applicationNo": "C060325-0003",
+        "fullName": "David Lee",
+        "service": "Passport",
+        "appointmentDate": "10-03-2025",
+        "status": "scheduled",
+        "location": "Colombo",
+        "fee": 200
+      },
+      {
+        "id": 4,
+        "applicationNo": "C060325-0004",
+        "fullName": "Fathima Ali",
+        "service": "Passport",
+        "appointmentDate": "11-03-2025",
+        "status": "scheduled",
+        "location": "Colombo",
+        "fee": 200
+      },
+      {
+        "id": 5,
+        "applicationNo": "C060325-0005",
+        "fullName": "Michael Brown",
+        "service": "Passport",
+        "appointmentDate": "12-03-2025",
+        "status": "scheduled",
+        "location": "Colombo",
+        "fee": 200
+      },
+      {
+        "id": 6,
+        "applicationNo": "C060325-0006",
+        "fullName": "Sarah Jones",
+        "service": "Attestation",
+        "appointmentDate": "13-03-2025",
+        "status": "scheduled",
+        "location": "Colombo",
+        "fee": 150
+      },
+      {
+        "id": 7,
+        "applicationNo": "C060325-0007",
+        "fullName": "Raj Patel",
+        "service": "Passport",
+        "appointmentDate": "14-03-2025",
+        "status": "scheduled",
+        "location": "Colombo",
+        "fee": 200
+      },
+      {
+        "id": 8,
+        "applicationNo": "K060325-0001",
+        "fullName": "Anil Kumar",
+        "service": "Passport",
+        "appointmentDate": "15-03-2025",
+        "status": "scheduled",
+        "location": "Kandy",
+        "fee": 200
+      },
+      {
+        "id": 9,
+        "applicationNo": "K060325-0002",
+        "fullName": "Sajesh Keloth",
+        "service": "Passport",
+        "appointmentDate": "16-03-2025",
+        "status": "scheduled",
+        "location": "Kandy",
+        "fee": 200
+      },
+      {
+        "id": 10,
+        "applicationNo": "K060325-0003",
+        "fullName": "Anil Dev",
+        "service": "Passport",
+        "appointmentDate": "17-03-2025",
+        "status": "scheduled",
+        "location": "Kandy",
+        "fee": 200
+      },
+      {
+        "id": 11,
+        "applicationNo": "K060325-0004",
+        "fullName": "Shanil Mon",
+        "service": "OCI",
+        "appointmentDate": "18-03-2025",
+        "status": "scheduled",
+        "location": "Kandy",
+        "fee": 150
+      },
+      {
+        "id": 12,
+        "applicationNo": "K060325-0005",
+        "fullName": "Jeena Vijay",
+        "service": "Passport",
+        "appointmentDate": "19-03-2025",
+        "status": "scheduled",
+        "location": "Kandy",
+        "fee": 200
+      },
+      {
+        "id": 13,
+        "applicationNo": "K060325-0006",
+        "fullName": "Ajith Kishore",
+        "service": "Passport",
+        "appointmentDate": "20-03-2025",
+        "status": "scheduled",
+        "location": "Kandy",
+        "fee": 200
+      }
     ],
+    
+
     "itemsPerPage": 5
   }
-
 }

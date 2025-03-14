@@ -12,6 +12,7 @@ import {
     MessagesSquare,
     Settings2,
     Shield,
+    Speech,
     TimerReset,
     TowerControl,
     User2,
@@ -58,6 +59,11 @@ import { DropdownMenu, DropdownMenuTrigger } from "../ui/dropdown-menu";
           title: "Appointments",
           url: "/admin/appointment",
           icon: MessagesSquare,
+        },
+        {
+          title: "Feedback",
+          url: "/admin/feedback",
+          icon: Speech,
         },
         
       ], // no sub-items for this one
