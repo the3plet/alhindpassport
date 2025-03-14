@@ -147,6 +147,14 @@
           "description": "Guide details here"
         },
         {
+          "title": "Passport Types",
+          "description": "Guide details here"
+        },
+        {
+          "title": "Online Application",
+          "description": "Guide details here"
+        },
+        {
           "title": "Fee",
           "description": "Passport fee details here"
         },
@@ -173,6 +181,14 @@
           "description": "Guide details here"
         },
         {
+          "title": "Visa Types",
+          "description": "Guide details here"
+        },
+        {
+          "title": "Online Application",
+          "description": "Guide details here"
+        },
+        {
           "title": "Fee",
           "description": "Visa fee details here"
         },
@@ -191,43 +207,82 @@
       ]
     }
   ],
-  "application_steps": [
-    {
-      "id": 1,
-      "title": "Identify visa type",
-      "description": "Choose the right visa for your trip"
-    },
-    {
-      "id": 2,
-      "title": "Begin your application",
-      "description": "Get started with your visa application"
-    },
-    {
-      "id": 3,
-      "title": "Book an appointment",
-      "description": "Choose a Visa Application Centre and make an appointment"
-    },
-    {
-      "id": 4,
-      "title": "Pay your fees",
-      "description": "Find out the amount you need to pay"
-    },
-    {
-      "id": 5,
-      "title": "Visit a Visa Application Centre",
-      "description": "Attend your scheduled appointment"
-    },
-    {
-      "id": 6,
-      "title": "Track your application",
-      "description": "Stay informed about the progress of your application"
-    },
-    {
-      "id": 7,
-      "title": "Collect your passport",
-      "description": "Receive your passport from the Visa Application Centre"
-    }
-  ],
+  "application_steps": {
+    "passport": [
+      {
+        "id": 1,
+        "title": "Identify passport type",
+        "description": "Choose the right passport for your trip"
+      },
+      {
+        "id": 2,
+        "title": "Begin your application",
+        "description": "Get started with your passport application"
+      },
+      {
+        "id": 3,
+        "title": "Book an appointment",
+        "description": "Choose a Passport Application Centre and make an appointment"
+      },
+      {
+        "id": 4,
+        "title": "Pay your fees",
+        "description": "Find out the amount you need to pay"
+      },
+      {
+        "id": 5,
+        "title": "Visit a Passport Application Centre",
+        "description": "Attend your scheduled appointment"
+      },
+      {
+        "id": 6,
+        "title": "Track your application",
+        "description": "Stay informed about the progress of your application"
+      },
+      {
+        "id": 7,
+        "title": "Collect your passport",
+        "description": "Receive your passport from the Passport Application Centre"
+      }
+    ],
+    "visa": [
+      {
+        "id": 1,
+        "title": "Identify visa type",
+        "description": "Choose the right visa for your trip"
+      },
+      {
+        "id": 2,
+        "title": "Begin your application",
+        "description": "Get started with your visa application"
+      },
+      {
+        "id": 3,
+        "title": "Book an appointment",
+        "description": "Choose a Visa Application Centre and make an appointment"
+      },
+      {
+        "id": 4,
+        "title": "Pay your fees",
+        "description": "Find out the amount you need to pay"
+      },
+      {
+        "id": 5,
+        "title": "Visit a Visa Application Centre",
+        "description": "Attend your scheduled appointment"
+      },
+      {
+        "id": 6,
+        "title": "Track your application",
+        "description": "Stay informed about the progress of your application"
+      },
+      {
+        "id": 7,
+        "title": "Collect your passport",
+        "description": "Receive your passport from the Visa Application Centre"
+      }
+    ]
+  },
   "adminpanel": {
     "locationData": [
       { "name": "Passport", "count": 4 },

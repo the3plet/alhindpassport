@@ -26,21 +26,27 @@ import { toast } from "sonner";
 type Props = {};
 
 const ServiceDetail = (props: Props) => {
-  const [valuetab,setValueTab] = useState('')
-  const [disabled,setDisabled]= useState<boolean>()
+  const [valuetab, setValueTab] = useState("");
+  const [disabled, setDisabled] = useState<boolean>();
   const { id } = useParams();
   const allservices = api.services.find(
     (service) => service.name.toLowerCase() === id
   );
-  const verified = localStorage.getItem("verified")
+  const verified = localStorage.getItem("verified");
   console.log(allservices);
 
-  useEffect(()=>{
-    if(valuetab ==="Schedule an Appointment"){
-      verified !=="true" && toast.error("Unauthorized to perform action. Please login to submit a new appointment") && setDisabled(true)
-    
+  useEffect(() => {
+    if (valuetab === "Schedule an Appointment") {
+      verified !== "true" &&
+        toast.error(
+          "Unauthorized to perform action. Please login to submit a new appointment"
+        ) &&
+        setDisabled(true);
     }
-  },[valuetab,verified])
+  }, [valuetab, verified]);
+
+  const location = window.location.pathname.split('/').pop()
+  console.log(location)
 
   return (
     <div className="">
@@ -51,7 +57,8 @@ const ServiceDetail = (props: Props) => {
       <div className="px-28 py-14">
         <Tabs
           defaultValue={allservices?.details[0].title}
-          className="flex flex-row shadow-lg rounded-xl" onValueChange={setValueTab}
+          className="flex flex-row shadow-lg rounded-xl"
+          onValueChange={setValueTab}
         >
           <TabsList className="flex flex-col h-full">
             {allservices?.details.map((ser) => (
@@ -107,7 +114,7 @@ const ServiceDetail = (props: Props) => {
               </ul>
             </div>
           </TabsContent>
-          <TabsContent value="Schedule an Appointment"  className="py-5 px-2">
+          <TabsContent value="Schedule an Appointment" className="py-5 px-2">
             <h1 className="flex py-4 rounded-sm rounded-b-none justify-center items-center text-white text-2xl font-semibold bg-gray-600">
               Schedule an Appointment
             </h1>
@@ -242,21 +249,22 @@ const ServiceDetail = (props: Props) => {
               <div className="col-span-2 flex justify-center gap-1.5">
                 <Button
                   className="w-full bg-blue-600 hover:bg-blue-500 text-white py-2"
-                  type="button" disabled={disabled}
+                  type="button"
+                  disabled={disabled}
                 >
-                  {disabled ? 'Login for submiting the appointment' : 'Submit'}
+                  {disabled ? "Login for submiting the appointment" : "Submit"}
                 </Button>
               </div>
             </form>
           </TabsContent>
-          <TabsContent value="Step by Step Guide" >
+          <TabsContent value="Step by Step Guide">
             <div>
               <div className="p-4 bg-gray-600 text-white font-semibold rounded-sm rounded-b-none">
                 <p className="text-sm">Apply in person</p>
                 <h2 className="text-2xl">Step by Step guide</h2>
               </div>
               <Accordion type="single" collapsible className="px-6">
-                {api.application_steps.map((step) => (
+                {api.application_steps[location ==="passport" ? 'passport' : 'visa'].map((step) => (
                   <AccordionItem key={step.id} value={step.title}>
                     <AccordionTrigger className=" text-lg cursor-pointer ">
                       <div className="flex justify-start gap-2">
@@ -285,8 +293,10 @@ const ServiceDetail = (props: Props) => {
           <TabsContent value="Fee">
             <FeeCard />
           </TabsContent>
-          <TabsContent value="Application Forms" >
-            <h1 className="flex justify-center items-center bg-gray-600 text-white text-2xl font-semibold py-4 rounded-sm rounded-b-none">Application Forms</h1>
+          <TabsContent value="Application Forms">
+            <h1 className="flex justify-center items-center bg-gray-600 text-white text-2xl font-semibold py-4 rounded-sm rounded-b-none">
+              Application Forms
+            </h1>
             <Card className="w-fit shadow-none border-none">
               <CardContent className="flex w-fit gap-3.5 px-4 ">
                 <div className="flex justify-center items-center bg-gray-100 p-8 rounded-lg">
@@ -304,7 +314,7 @@ const ServiceDetail = (props: Props) => {
                 </div>
                 <div className="flex items-center">
                   <Button className="h-6" variant={"outline"}>
-                    Visit <ExternalLink/>
+                    Visit <ExternalLink />
                   </Button>
                 </div>
               </CardContent>
@@ -326,7 +336,7 @@ const ServiceDetail = (props: Props) => {
                 </div>
                 <div className="flex items-center">
                   <Button className="h-6" variant={"outline"}>
-                    Visit <ExternalLink/>
+                    Visit <ExternalLink />
                   </Button>
                 </div>
               </CardContent>
@@ -348,11 +358,26 @@ const ServiceDetail = (props: Props) => {
                 </div>
                 <div className="flex items-center">
                   <Button className="h-6" variant={"outline"}>
-                    Visit <ExternalLink/>
+                    Visit <ExternalLink />
                   </Button>
                 </div>
               </CardContent>
             </Card>
+          </TabsContent>
+          <TabsContent value="Passport Types">
+            <h1 className="flex justify-center items-center h-full text-2xl font-semibold">
+              Contents Here
+            </h1>
+          </TabsContent>
+          <TabsContent value="Online Application">
+            <h1 className="flex justify-center items-center h-full text-2xl font-semibold">
+              Contents Here
+            </h1>
+          </TabsContent>
+          <TabsContent value="Visa Types">
+            <h1 className="flex justify-center items-center h-full text-2xl font-semibold">
+              Contents Here
+            </h1>
           </TabsContent>
         </Tabs>
       </div>
