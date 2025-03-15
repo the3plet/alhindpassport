@@ -13,6 +13,8 @@ import {
 } from "@/components/ui/breadcrumb";
 import QrReceipt from "@/components/dashboard/BarcodeReceipt";
 import { QRCodeSVG } from "qrcode.react";
+import { Dialog } from "@radix-ui/react-dialog";
+import { DialogContent, DialogTrigger } from "@/components/ui/dialog";
 
 const appointments = {
   upcoming: [
@@ -92,15 +94,22 @@ export default function UserAppointment() {
                 >
                   <div>
                     <p className="font-semibold">{appt.title}</p>
-                    <Badge
-                      className={`rounded-full bg-white px-2 py-0.5 text-xs border ${
-                        appt.status === "Confirmed"
-                          ? "border-green-500 text-green-500"
-                          : "border-yellow-500 text-yellow-500"
-                      }`}
-                    >
-                      {appt.status}
-                    </Badge>
+                    <Dialog>
+                      <DialogTrigger>
+                        <Badge
+                          className={`rounded-full bg-white px-2 py-0.5 text-xs border cursor-pointer ${
+                            appt.status === "Confirmed"
+                              ? "border-green-500 text-green-500"
+                              : "border-yellow-500 text-yellow-500"
+                          }`}
+                        >
+                          {appt.status}
+                        </Badge>
+                      </DialogTrigger>
+                      <DialogContent className="w-5xl ">
+                        <img alt="img" src="/info.png" className="w-5xl" />
+                      </DialogContent>
+                    </Dialog>
                     <p className="text-sm text-gray-500">
                       Application No: {appt.applicationNumber}
                     </p>
@@ -109,12 +118,10 @@ export default function UserAppointment() {
                     </p>
                   </div>
                   <div>
-                    <QRCodeSVG value={appt.applicationNumber} size={70}/>
+                    <QRCodeSVG value={appt.applicationNumber} size={70} />
                   </div>
                   <div className="flex flex-col gap-1.5">
-                    {appt.status !="Pending" && 
-                    <QrReceipt />
-                    }
+                    {appt.status != "Pending" && <QrReceipt />}
                     {/* <Badge className="cursor-pointer w-full" variant="outline">Track Appointment</Badge> */}
                     <Badge
                       className="cursor-pointer w-full hover:underline"
@@ -125,7 +132,6 @@ export default function UserAppointment() {
                     </Badge>
                     <CancellationPopup />
                   </div>
-                 
                 </div>
               ))}
             </CardContent>
@@ -165,7 +171,7 @@ export default function UserAppointment() {
                     </p>
                   </div>
                   <div>
-                    <QRCodeSVG value={appt.applicationNumber} size={70}/>
+                    <QRCodeSVG value={appt.applicationNumber} size={70} />
                   </div>
                   <div className="flex flex-col gap-1.5">
                     <QrReceipt />
