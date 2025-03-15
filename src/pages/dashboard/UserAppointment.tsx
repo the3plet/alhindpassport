@@ -13,8 +13,7 @@ import {
 } from "@/components/ui/breadcrumb";
 import QrReceipt from "@/components/dashboard/BarcodeReceipt";
 import { QRCodeSVG } from "qrcode.react";
-import { Dialog } from "@radix-ui/react-dialog";
-import { DialogContent, DialogTrigger } from "@/components/ui/dialog";
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 
 const appointments = {
   upcoming: [
@@ -106,8 +105,12 @@ export default function UserAppointment() {
                           {appt.status}
                         </Badge>
                       </DialogTrigger>
-                      <DialogContent className="w-5xl ">
-                        <img alt="img" src="/info.png" className="w-5xl" />
+                      <DialogContent className=" !max-w-none w-4xl">
+                        <img
+                          alt="img"
+                          src="/info.png"
+                          className="w-full h-full p-4 object-contain"
+                        />
                       </DialogContent>
                     </Dialog>
                     <p className="text-sm text-gray-500">
