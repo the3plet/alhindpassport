@@ -13,7 +13,7 @@ const OfficeTable = (props: Props) => {
       <TableHeader >
         <TableRow>
           <TableHead className="w-[50px]">Location</TableHead>
-          <TableHead className="w-40">No of Counters</TableHead>
+          {/* <TableHead className="w-40">No of Counters</TableHead> */}
           <TableHead className="w-40">Day</TableHead>
           <TableHead className="w-40 text-right">Office Hours</TableHead>
         </TableRow>
@@ -22,7 +22,7 @@ const OfficeTable = (props: Props) => {
         {api.locations.map((loc)=>(
             <TableRow key={loc.id} onClick={()=>naviagte(`/offices/${loc.id}`)}>
                 <TableCell className="underline cursor-pointer">{loc.name}</TableCell>
-                <TableCell>{loc.no_of_counters}</TableCell>
+                {/* <TableCell>{loc.no_of_counters}</TableCell> */}
                 <TableCell>{loc.day}</TableCell>
                 <TableCell className="text-right">{loc.opening_hours}</TableCell>
             </TableRow>
