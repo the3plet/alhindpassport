@@ -187,7 +187,6 @@ const Home = () => {
                 <div className="flex items-start gap-4">
                   <Phone className="w-6 h-6 text-blue-600 flex-shrink-0" />
                   <div>
-                    <h4 className="font-semibold">24x7 Helpline</h4>
                     <p className="text-gray-600">1800-258-1800</p>
                     <p className="text-gray-600">+91-44-2346-1800</p>
                   </div>
@@ -195,12 +194,9 @@ const Home = () => {
                 <div>
                   <h4 className="font-semibold mb-2">Support Hours</h4>
                   <p className="text-gray-600">
-                    Monday to Friday: 9:00 AM - 5:30 PM
+                  Monday to Saturday 08:00 - 13:00, 14:00 - 19:00
                   </p>
-                  <p className="text-gray-600">Saturday: 9:00 AM - 1:00 PM</p>
-                  <p className="text-gray-600">
-                    Closed on Sundays and Public Holidays
-                  </p>
+                 
                 </div>
               </div>
             </div>

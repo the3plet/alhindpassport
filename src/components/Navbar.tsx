@@ -34,12 +34,8 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <Link to="" className="flex">
-              <img
-                src="https://www.alhind.com/assets/img/logo-alhind.webp"
-                className="w-44"
-                alt="img"
-              />
-              <h1 className="text-3xl font-semibold text-blue-700">ICAC</h1>
+             
+              <h1 className=" w-xs text-lg font-bold text-blue-700"> Indian Consular Application Center</h1>
             </Link>
           </div>
 
@@ -75,7 +71,7 @@ export default function Navbar() {
                 to="complaint"
                 className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium"
               >
-                Complaints
+                Grievance
               </Link>
             ) : null}
 
