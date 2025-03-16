@@ -184,9 +184,15 @@ const Home = () => {
             <div className="bg-white p-8 rounded-lg shadow">
               <h3 className="text-2xl font-bold mb-6">Contact Support</h3>
               <div className="space-y-6">
-                <div className="flex items-start gap-4">
-                  <Phone className="w-6 h-6 text-blue-600 flex-shrink-0" />
+                <div className="flex items-center gap-4">
+                  <Phone className="w-6 h-6 text-blue-600 flex-shrink-0 " />
                   <div>
+                    <p>Dubai</p>
+                    <p className="text-gray-600">1800-258-1800</p>
+                    <p className="text-gray-600">+91-44-2346-1800</p>
+                  </div>
+                  <div>
+                    <p>Abu Dhabi</p>
                     <p className="text-gray-600">1800-258-1800</p>
                     <p className="text-gray-600">+91-44-2346-1800</p>
                   </div>
