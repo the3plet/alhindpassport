@@ -11,7 +11,7 @@ const OfficeDetail = (props: Props) => {
   const office = api.locations.find((loc) => loc.id.toString() === id);
   return (
     <div className="flex justify-between py-20">
-      <div className="flex flex-col gap-10 pl-48">
+      <div className="flex flex-col gap-5 pl-48">
         <div>
           <Link to="/offices" className="flex items-center gap-0.5">
             <ArrowLeft size={15} className="h-5" />
@@ -35,9 +35,9 @@ const OfficeDetail = (props: Props) => {
             {office?.location_address}
           </p>
         </div>
-        <div>
-          <h1 className="text-4xl font-sans">Parking</h1>
-          <p className="text-md w-sm pt-4">{office?.parking}</p>
+        <div className="pt-2">
+          <h1 className="text-4xl font-sans">Public Transport</h1>
+          <p className="text-md w-sm pt-4">{office?.public_transport_availability}</p>
         </div>
       </div>
       <div className="flex flex-col gap-2 pr-48">
@@ -49,10 +49,7 @@ const OfficeDetail = (props: Props) => {
           src="https://miro.medium.com/v2/resize:fit:1400/1*qYUvh-EtES8dtgKiBRiLsA.png"
           width={450} onClick={()=> window.open(office?.google_location || '#',"_blank") }
         />
-        <div className="pt-4">
-          <h1 className="text-4xl font-sans">Public Transport</h1>
-          <p className="text-md w-sm pt-4">{office?.public_transport_availability}</p>
-        </div>
+       
       </div>
     </div>
   );

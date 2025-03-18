@@ -24,62 +24,61 @@
   
   
     "locations": [
-      {
-        "id": 1,
-        "name": "BIN OMRAN",
-        "location_address": "1ST FLOOR, BLDG # 163, STREET 232, ZONE 37, AHMED BIN ALI STREET, OPP AL AHLI HOSPITAL",
-        "google_location": "https://maps.app.goo.gl/5zRj4Fqu5KKtogBq7?g_st=com.google.maps.preview.copy",
-        "public_transport_availability": "METRO LINK BUS STOP NO 37008, DISTANCE 150MTRS",
-        "parking": "COMMON FREE PARKING AVAILABLE FRONT AND BACK SIDE OF THE BUILDING, RESERVED SIX BASEMENT PARKING",
-        "day": "Monday to Saturday",
-        "working_hours": {
-          "general_hours": "0800 to 1800 Hrs",
-          "details": {
-            "working_hours": "0800 to 1800 Hrs",
-            "lunch_break": "1300 to 1400 Hrs",
-            "submission_hours": "0800 to 1300, 1400 to 1800 Hrs",
-            "delivery_hours": "1500 to 1800 Hrs"
-          }
-        }
-      },
-      {
-        "id": 2,
-        "name": "AL WAKRAH",
-        "location_address": "GROUND FLOOR WITH MEZZANINE FLOOR, BLDG # 57, STREET 844, ZONE 90, AL WAKRAH MAIN ROAD, OPP QNB",
-        "google_location": "https://maps.app.goo.gl/Sw3Hon1yVXaTjZLz8?g_st=com.google.maps.preview.copy",
-        "public_transport_availability": "AL WAKRAH METRO STATION -500 MTRS. PUBLIC BUS STOP NO 90602 - 200 MTRS",
-        "parking": "COMMON FREE PARKING AVAILABLE FRONT AND BACK SIDE OF THE BUILDING, RESERVED THREE PARKING",
-        "day": "Monday to Saturday",
-        "working_hours": {
-          "general_hours": "0800 to 1800 Hrs",
-          "details": {
-            "working_hours": "0800 to 1800 Hrs",
-            "lunch_break": "1300 to 1400 Hrs",
-            "submission_hours": "0800 to 1300, 1400 to 1800 Hrs",
-            "delivery_hours": "1500 to 1800 Hrs"
-          }
-        }
-      },
-      {
-        "id": 3,
-        "name": "AL KHOR",
-        "location_address": "GROUND FLOOR WITH MEZZANINE FLOOR, BLDG # 47, STREET 584, NEAR ALKHOR MALL",
-        "google_location": "https://maps.app.goo.gl/fNqcXZTEsGtwhmQW7?g_st=iwb",
-        "public_transport_availability": "PUBLIC BUS STOP NO 5, -100 MTRS",
-        "parking": "COMMON FREE PARKING IN FRONT OF THE BUILDING",
-        "day": "Monday to Saturday",
-        "working_hours": {
-          "general_hours": "0800 to 1800 Hrs",
-          "details": {
-            "working_hours": "0800 to 1800 Hrs",
-            "lunch_break": "1300 to 1400 Hrs",
-            "submission_hours": "0800 to 1300, 1400 to 1800 Hrs",
-            "delivery_hours": "1500 to 1800 Hrs"
-          }
+    {
+      "id": 1,
+      "name": "Bin Omran",
+      "location_address": "1st floor, BLDG # 163, street 232, zone 37, Ahmed Bin Ali street, opp Al Ahli hospital",
+      "google_location": "https://maps.app.goo.gl/5zRj4Fqu5KKtogBq7?g_st=com.google.maps.preview.copy",
+      "public_transport_availability": "Metro link bus stop no 37008, distance 150mtrs",
+      "parking": "Common free parking available front and back side of the building, reserved six basement parking",
+      "day": "Monday to Saturday",
+      "working_hours": {
+        "general_hours": "0800 to 1800 Hrs",
+        "details": {
+          "working_hours": "0800 to 1800 Hrs",
+          "lunch_break": "1300 to 1400 Hrs",
+          "submission_hours": "0800 to 1300, 1400 to 1800 Hrs",
+          "delivery_hours": "1500 to 1800 Hrs"
         }
       }
-    ]
-  
+    },
+    {
+      "id": 2,
+      "name": "Al Wakrah",
+      "location_address": "Ground floor with mezzanine floor, BLDG # 57, street 844, zone 90, Al Wakrah main road, opp QNB",
+      "google_location": "https://maps.app.goo.gl/Sw3Hon1yVXaTjZLz8?g_st=com.google.maps.preview.copy",
+      "public_transport_availability": "Al Wakrah metro station -500 mtrs. Public bus stop no 90602 - 200 mtrs",
+      "parking": "Common free parking available front and back side of the building, reserved three parking",
+      "day": "Monday to Saturday",
+      "working_hours": {
+        "general_hours": "0800 to 1800 Hrs",
+        "details": {
+          "working_hours": "0800 to 1800 Hrs",
+          "lunch_break": "1300 to 1400 Hrs",
+          "submission_hours": "0800 to 1300, 1400 to 1800 Hrs",
+          "delivery_hours": "1500 to 1800 Hrs"
+        }
+      }
+    },
+    {
+      "id": 3,
+      "name": "Al Khor",
+      "location_address": "Ground floor with mezzanine floor, BLDG # 47, street 584, near Al Khor mall",
+      "google_location": "https://maps.app.goo.gl/fNqcXZTEsGtwhmQW7?g_st=iwb",
+      "public_transport_availability": "Public bus stop no 5, -100 mtrs",
+      "parking": "Common free parking in front of the building",
+      "day": "Monday to Saturday",
+      "working_hours": {
+        "general_hours": "0800 to 1800 Hrs",
+        "details": {
+          "working_hours": "0800 to 1800 Hrs",
+          "lunch_break": "1300 to 1400 Hrs",
+          "submission_hours": "0800 to 1300, 1400 to 1800 Hrs",
+          "delivery_hours": "1500 to 1800 Hrs"
+        }
+      }
+    }
+  ]
   
   ,
   
