@@ -21,106 +21,68 @@
       "otp": "0000000"
     }
   ],
-  "locations": [
-    {
-      "id": 1,
-      "name": "Abu Dhabi (Al Khalidiya)",
-      "no_of_counters": 18,
-      "day": "Monday to Saturday",
-      "opening_hours": "08:00 - 13:00, 14:00 - 19:00"
-    },
-    {
-      "id": 2,
-      "name": "Abu Dhabi (Al Reem)",
-      "no_of_counters": 22,
-      "day": "Monday to Saturday",
-      "opening_hours": "08:00 - 13:00, 14:00 - 19:00"
-    },
-    {
-      "id": 3,
-      "name": "Abu Dhabi (Musaffah)",
-      "no_of_counters": 16,
-      "day": "Monday to Saturday",
-      "opening_hours": "08:00 - 13:00, 14:00 - 19:00"
-    },
-    {
-      "id": 4,
-      "name": "Al Ain",
-      "no_of_counters": 19,
-      "day": "Monday to Saturday",
-      "opening_hours": "08:00 - 13:00, 14:00 - 19:00"
-    },
-    {
-      "id": 5,
-      "name": "Ghyathi",
-      "no_of_counters": 25,
-      "day": "Monday to Saturday",
-      "opening_hours": "08:00 - 13:00, 14:00 - 19:00"
-    },
-    {
-      "id": 6,
-      "name": "Dubai (Bur Dubai)",
-      "no_of_counters": 12,
-      "day": "Monday to Saturday",
-      "opening_hours": "08:00 - 13:00, 14:00 - 19:00"
-    },
-    {
-      "id": 7,
-      "name": "Dubai (JLT/ Marina)",
-      "no_of_counters": 20,
-      "day": "Monday to Saturday",
-      "opening_hours": "08:00 - 13:00, 14:00 - 19:00"
-    },
-    {
-      "id": 8,
-      "name": "Sharjah (Al Majaz)",
-      "no_of_counters": 17,
-      "day": "Monday to Saturday",
-      "opening_hours": "08:00 - 13:00, 14:00 - 19:00"
-    },
-    {
-      "id": 9,
-      "name": "Ajman (Al Jerf)",
-      "no_of_counters": 13,
-      "day": "Monday to Saturday",
-      "opening_hours": "08:00 - 13:00, 14:00 - 19:00"
-    },
-    {
-      "id": 10,
-      "name": "Fujairah",
-      "no_of_counters": 21,
-      "day": "Monday to Saturday",
-      "opening_hours": "08:00 - 13:00, 14:00 - 19:00"
-    },
-    {
-      "id": 11,
-      "name": "Umm Al Quwain",
-      "no_of_counters": 15,
-      "day": "Monday to Saturday",
-      "opening_hours": "08:00 - 13:00, 14:00 - 19:00"
-    },
-    {
-      "id": 12,
-      "name": "Khor Fakkan (Corniche/ Subara)",
-      "no_of_counters": 24,
-      "day": "Monday to Saturday",
-      "opening_hours": "08:00 - 13:00, 14:00 - 19:00"
-    },
-    {
-      "id": 13,
-      "name": "Kalba",
-      "no_of_counters": 10,
-      "day": "Monday to Saturday",
-      "opening_hours": "08:00 - 13:00, 14:00 - 19:00"
-    },
-    {
-      "id": 14,
-      "name": "Ras Al Khaimah (Nakheel/ Khujan/ Mareed)",
-      "no_of_counters": 16,
-      "day": "Monday to Saturday",
-      "opening_hours": "08:00 - 13:00, 14:00 - 19:00"
-    }
-  ],
+  
+  
+    "locations": [
+      {
+        "id": 1,
+        "name": "BIN OMRAN",
+        "location_address": "1ST FLOOR, BLDG # 163, STREET 232, ZONE 37, AHMED BIN ALI STREET, OPP AL AHLI HOSPITAL",
+        "google_location": "https://maps.app.goo.gl/5zRj4Fqu5KKtogBq7?g_st=com.google.maps.preview.copy",
+        "public_transport_availability": "METRO LINK BUS STOP NO 37008, DISTANCE 150MTRS",
+        "parking": "COMMON FREE PARKING AVAILABLE FRONT AND BACK SIDE OF THE BUILDING, RESERVED SIX BASEMENT PARKING",
+        "day": "Monday to Saturday",
+        "working_hours": {
+          "general_hours": "0800 to 1800 Hrs",
+          "details": {
+            "working_hours": "0800 to 1800 Hrs",
+            "lunch_break": "1300 to 1400 Hrs",
+            "submission_hours": "0800 to 1300, 1400 to 1800 Hrs",
+            "delivery_hours": "1500 to 1800 Hrs"
+          }
+        }
+      },
+      {
+        "id": 2,
+        "name": "AL WAKRAH",
+        "location_address": "GROUND FLOOR WITH MEZZANINE FLOOR, BLDG # 57, STREET 844, ZONE 90, AL WAKRAH MAIN ROAD, OPP QNB",
+        "google_location": "https://maps.app.goo.gl/Sw3Hon1yVXaTjZLz8?g_st=com.google.maps.preview.copy",
+        "public_transport_availability": "AL WAKRAH METRO STATION -500 MTRS. PUBLIC BUS STOP NO 90602 - 200 MTRS",
+        "parking": "COMMON FREE PARKING AVAILABLE FRONT AND BACK SIDE OF THE BUILDING, RESERVED THREE PARKING",
+        "day": "Monday to Saturday",
+        "working_hours": {
+          "general_hours": "0800 to 1800 Hrs",
+          "details": {
+            "working_hours": "0800 to 1800 Hrs",
+            "lunch_break": "1300 to 1400 Hrs",
+            "submission_hours": "0800 to 1300, 1400 to 1800 Hrs",
+            "delivery_hours": "1500 to 1800 Hrs"
+          }
+        }
+      },
+      {
+        "id": 3,
+        "name": "AL KHOR",
+        "location_address": "GROUND FLOOR WITH MEZZANINE FLOOR, BLDG # 47, STREET 584, NEAR ALKHOR MALL",
+        "google_location": "https://maps.app.goo.gl/fNqcXZTEsGtwhmQW7?g_st=iwb",
+        "public_transport_availability": "PUBLIC BUS STOP NO 5, -100 MTRS",
+        "parking": "COMMON FREE PARKING IN FRONT OF THE BUILDING",
+        "day": "Monday to Saturday",
+        "working_hours": {
+          "general_hours": "0800 to 1800 Hrs",
+          "details": {
+            "working_hours": "0800 to 1800 Hrs",
+            "lunch_break": "1300 to 1400 Hrs",
+            "submission_hours": "0800 to 1300, 1400 to 1800 Hrs",
+            "delivery_hours": "1500 to 1800 Hrs"
+          }
+        }
+      }
+    ]
+  
+  
+  ,
+  
   "locationList": [
     "Abu Dhabi (Al Khalidiya)",
     "Abu Dhabi (Al Reem)",

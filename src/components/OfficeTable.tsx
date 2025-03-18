@@ -24,7 +24,7 @@ const OfficeTable = (props: Props) => {
                 <TableCell className="underline cursor-pointer">{loc.name}</TableCell>
                 {/* <TableCell>{loc.no_of_counters}</TableCell> */}
                 <TableCell>{loc.day}</TableCell>
-                <TableCell className="text-right">{loc.opening_hours}</TableCell>
+                <TableCell className="text-right">{loc.working_hours.general_hours}</TableCell>
             </TableRow>
         ))}
       </TableBody>

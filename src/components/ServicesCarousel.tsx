@@ -65,7 +65,7 @@ export default function ServicesCarousel({ services }: ServicesCarouselProps) {
               <div className="flex items-center justify-center gap-8 text-lg">
                 <div className="flex items-center">
                   <span className="font-semibold">Fees:</span>
-                  <span className="ml-2">AED {service.fees}</span>
+                  <span className="ml-2">QAR {service.fees}</span>
                 </div>
                 <div className="flex items-center">
                   <span className="font-semibold">Processing Time:</span>
