@@ -45,7 +45,7 @@
     {
       "id": 2,
       "name": "Al Wakrah",
-      "location_address": "Ground floor with mezzanine floor, BLDG # 57, street 844, zone 90, Al Wakrah main road, opp QNB",
+      "location_address": "Ground floor, BLDG # 57, street 844, zone 90, Al Wakrah main road, opp QNB",
       "google_location": "https://maps.app.goo.gl/Sw3Hon1yVXaTjZLz8?g_st=com.google.maps.preview.copy",
       "public_transport_availability": "Al Wakrah metro station -500 mtrs. Public bus stop no 90602 - 200 mtrs",
       "parking": "Common free parking available front and back side of the building, reserved three parking",
@@ -63,7 +63,7 @@
     {
       "id": 3,
       "name": "Al Khor",
-      "location_address": "Ground floor with mezzanine floor, BLDG # 47, street 584, near Al Khor mall",
+      "location_address": "Ground floor, BLDG # 47, street 584, near Al Khor mall",
       "google_location": "https://maps.app.goo.gl/fNqcXZTEsGtwhmQW7?g_st=iwb",
       "public_transport_availability": "Public bus stop no 5, -100 mtrs",
       "parking": "Common free parking in front of the building",
