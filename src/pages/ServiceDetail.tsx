@@ -46,7 +46,7 @@ const ServiceDetail = (props: Props) => {
   }, [valuetab, verified]);
 
   const location = window.location.pathname.split('/').pop()
-  console.log(location)
+  console.log(allservices,"service")
 
   return (
     <div className="">
@@ -55,6 +55,7 @@ const ServiceDetail = (props: Props) => {
         <p className="text-lg">Information about starting your application</p>
       </div>
       <div className="px-28 py-14">
+      {allservices && Object.keys(allservices).length > 0 ? (
         <Tabs
           defaultValue={allservices?.details[0].title}
           className="flex flex-row shadow-lg rounded-xl"
@@ -380,6 +381,11 @@ const ServiceDetail = (props: Props) => {
             </h1>
           </TabsContent>
         </Tabs>
+          ):(
+            <div className="h-96 flex items-center justify-center">
+              <h1 className="text-2xl flex justify-center items-center "> Service Guideline Contents</h1>
+              </div>
+          )}
       </div>
     </div>
   );

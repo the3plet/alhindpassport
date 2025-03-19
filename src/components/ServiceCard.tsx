@@ -20,7 +20,7 @@ export default function ServiceCard({ service }: ServiceCardProps) {
       serviceList = "visa";
       break;
     default:
-      serviceList = ""; 
+      serviceList = "other"; 
   }
 
 

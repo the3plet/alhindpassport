@@ -3,11 +3,11 @@ import React from "react";
 const FeeCard = () => {
   // Payment details
   const paymentDetails = {
-    consularFee: 10, // (a) Consular fee
-    consularSurcharge: 2, // (b) Consular surcharge
-    serviceFee: 3, // (c) Service Fee
-    taxes: 0.5, // (d) Taxes
-    bankCharges: 1, // (e) Bank/Agency charges
+    consularFee: 1000, // (a) Consular fee
+    consularSurcharge: 20, // (b) Consular surcharge
+    serviceFee: 30, // (c) Service Fee
+    taxes: 5, // (d) Taxes
+    bankCharges: 10, // (e) Bank/Agency charges
   };
 
   // Calculate totals

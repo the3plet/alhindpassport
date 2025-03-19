@@ -15,7 +15,7 @@ const UserServices = () => {
       name: "Passport Renewal",
       description:
         "Renew your expired or soon-to-expire passport with our efficient service.",
-      fees: 14.5,
+      fees: 145,
       processingTime: "7-10 business days",
     },
     {
@@ -23,7 +23,7 @@ const UserServices = () => {
       name: "Visa Application",
       description:
         "Apply for various types of visas including tourist, business, and student visas.",
-      fees: 16,
+      fees: 160,
       processingTime: "10-15 business days",
     },
     {
@@ -31,7 +31,7 @@ const UserServices = () => {
       name: "OCI Card",
       description:
         "Apply for Overseas Citizen of India (OCI) card or get your existing card renewed.",
-      fees: 27.5,
+      fees: 275,
       processingTime: "15-20 business days",
     },
     {
@@ -39,14 +39,14 @@ const UserServices = () => {
       name: "Miscellaneous Consular Services",
       description:
         "Obtain a Police Clearance Certificate (PCC) for visa or immigration purposes.",
-      fees: 7.5,
+      fees: 75,
       processingTime: "5-7 business days",
     },
     {
       id: "5",
       name: "Attestation",
       description: "Get your documents attested for use in foreign countries.",
-      fees: 5,
+      fees: 50,
       processingTime: "3-5 business days",
     },
   ];
