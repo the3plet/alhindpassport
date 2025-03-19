@@ -23,40 +23,40 @@ const FeeCard = () => {
       <div className="space-y-2 px-4">
         <div className="flex justify-between">
           <span>Consular Fee:</span>
-          <span>QAR{paymentDetails.consularFee}</span>
+          <span>KWD{paymentDetails.consularFee}</span>
         </div>
         <div className="flex justify-between">
           <span>Consular Surcharge:</span>
-          <span>QAR{paymentDetails.consularSurcharge}</span>
+          <span>KWD{paymentDetails.consularSurcharge}</span>
         </div>
         <hr />
         <div className="flex justify-between font-semibold">
           <span>Total (I):</span>
-          <span>QAR{totalI}</span>
+          <span>KWD{totalI}</span>
         </div>
         <hr />
         <div className="flex justify-between">
           <span>Service Fee:</span>
-          <span>QAR{paymentDetails.serviceFee}</span>
+          <span>KWD{paymentDetails.serviceFee}</span>
         </div>
         <div className="flex justify-between">
           <span>Taxes:</span>
-          <span>QAR{paymentDetails.taxes}</span>
+          <span>KWD{paymentDetails.taxes}</span>
         </div>
         <hr />
         <div className="flex justify-between font-semibold">
           <span>Total (II):</span>
-          <span>QAR{totalII}</span>
+          <span>KWD{totalII}</span>
         </div>
         <hr />
         <div className="flex justify-between">
           <span>Bank/Agency Charges:</span>
-          <span>QAR{paymentDetails.bankCharges}</span>
+          <span>KWD{paymentDetails.bankCharges}</span>
         </div>
         <hr className="border-t-2 border-gray-400" />
         <div className="flex justify-between font-bold text-lg">
           <span>Grand Total:</span>
-          <span>QAR{grandTotal}</span>
+          <span>KWD{grandTotal}</span>
         </div>
       </div>
     </div>

@@ -21,17 +21,16 @@
       "otp": "0000000"
     }
   ],
-  
-  
-    "locations": [
+
+  "locations": [
     {
       "id": 1,
-      "name": "Bin Omran",
-      "location_address": "1st floor, BLDG # 163, street 232, zone 37, Ahmed Bin Ali street, opp Al Ahli hospital",
-      "google_location": "https://maps.app.goo.gl/5zRj4Fqu5KKtogBq7?g_st=com.google.maps.preview.copy",
-      "public_transport_availability": "Metro link bus stop no 37008, distance 150mtrs",
-      "parking": "Common free parking available front and back side of the building, reserved six basement parking",
-      "day": "Monday to Saturday",
+      "name": "Kuwait City",
+      "location_address": "Mezzanine Floor, Ahmad Al Jaber Street, Block No 9 Zumorrodah Tower, Mubarakiya",
+      "google_location": "https://maps.app.goo.gl/X5PGnapwER5bZKBm7?g_st=aw",
+      "public_transport_availability": "10 Mtr from Souk Mubarakiya Bus stop",
+      "parking": "3 Dedicated reserved parking for ICAC and Open Parking available Surrounding",
+      "day": "Saturday to Friday",
       "working_hours": {
         "general_hours": "0800 to 1800 Hrs",
         "details": {
@@ -44,12 +43,12 @@
     },
     {
       "id": 2,
-      "name": "Al Wakrah",
-      "location_address": "Ground floor, BLDG # 57, street 844, zone 90, Al Wakrah main road, opp QNB",
-      "google_location": "https://maps.app.goo.gl/Sw3Hon1yVXaTjZLz8?g_st=com.google.maps.preview.copy",
-      "public_transport_availability": "Al Wakrah metro station -500 mtrs. Public bus stop no 90602 - 200 mtrs",
-      "parking": "Common free parking available front and back side of the building, reserved three parking",
-      "day": "Monday to Saturday",
+      "name": "Fahaheel",
+      "location_address": "2nd Floor, 57 Street, Ajial Mall, Fahaheel",
+      "google_location": "https://maps.app.goo.gl/1bamYcZQ5ihgDk6r8?g_st=aw",
+      "public_transport_availability": "300 Mtr from Shifa Al Jazeera Hospital Bus Stop",
+      "parking": "Open Parking available Surrounding",
+      "day": "Saturday to Friday",
       "working_hours": {
         "general_hours": "0800 to 1800 Hrs",
         "details": {
@@ -62,12 +61,30 @@
     },
     {
       "id": 3,
-      "name": "Al Khor",
-      "location_address": "Ground floor, BLDG # 47, street 584, near Al Khor mall",
-      "google_location": "https://maps.app.goo.gl/fNqcXZTEsGtwhmQW7?g_st=iwb",
-      "public_transport_availability": "Public bus stop no 5, -100 mtrs",
-      "parking": "Common free parking in front of the building",
-      "day": "Monday to Saturday",
+      "name": "Jleeb Al Shuwaikh (Abbasiya)",
+      "location_address": "2nd Floor, Grand Hyper Building, al ashud street, Jaleeb Al Shuwaikh",
+      "google_location": "https://maps.app.goo.gl/gGt1MSsKyaGsVUhaA?g_st=aw",
+      "public_transport_availability": "750 Mtr from Jleeb Co-Op Society Bus stop",
+      "parking": "Open Parking available Surrounding",
+      "day": "Saturday to Friday",
+      "working_hours": {
+        "general_hours": "0800 to 1800 Hrs",
+        "details": {
+          "working_hours": "0800 to 1800 Hrs",
+          "lunch_break": "1300 to 1400 Hrs",
+          "submission_hours": "0800 to 1300, 1400 to 1800 Hrs",
+          "delivery_hours": "1500 to 1800 Hrs"
+        }
+      }
+    },
+    {
+      "id": 4,
+      "name": "Jahra",
+      "location_address": "1st Floor, Alaf Mall, Block 4, Al Jahra",
+      "google_location": "https://maps.app.goo.gl/AY7FVGre6JHbAMed9?g_st=aw",
+      "public_transport_availability": "900 Mtr from Jaber Bin Abdullah Al Sabah Secondary School Bus Stop",
+      "parking": "Open Parking available Surrounding",
+      "day": "Saturday to Friday",
       "working_hours": {
         "general_hours": "0800 to 1800 Hrs",
         "details": {
@@ -78,15 +95,9 @@
         }
       }
     }
-  ]
-  
-  ,
-  
-  "locationList": [
-    "Bin Omran",
-    "Al Wakrah",
-    "Al Khor"
-],
+  ],
+
+"locationList": ["Kuwait City", "Fahaheel", "Jleeb Al Shuwaikh (Abbasiya)", "Jahra"],
   "services": [
     {
       "id": 1,
@@ -233,13 +244,13 @@
       }
     ]
   },
-  "feedback": [
+ "feedback": [
     {
       "Application_no": "ABU202400001",
       "Name": "John Smith",
       "Email": "john.smith@example.com",
       "Service": "Passport Renewal",
-      "Location": "Bin omran",
+      "Location": "Kuwait City",
       "Status": "Excellent",
       "Feedback_comment": "Excellent service, very efficient."
     },
@@ -248,7 +259,7 @@
       "Name": "Aisha Khan",
       "Email": "aisha.khan@example.com",
       "Service": "Visa Application",
-      "Location": "Al wakrah",
+      "Location": "Fahaheel",
       "Status": "Good",
       "Feedback_comment": "Good service, but waiting time was a bit long."
     },
@@ -257,7 +268,7 @@
       "Name": "David Lee",
       "Email": "david.lee@example.com",
       "Service": "OCI Application",
-      "Location": "Al khor",
+      "Location": "Jleeb Al Shuwaikh (Abbasiya)",
       "Status": "Average",
       "Feedback_comment": "Service was okay, some confusion with documents."
     },
@@ -266,7 +277,7 @@
       "Name": "Fatima Ali",
       "Email": "fatima.ali@example.com",
       "Service": "PCC",
-      "Location": "Bin omran",
+      "Location": "Kuwait City",
       "Status": "Excellent",
       "Feedback_comment": "Very helpful staff and quick processing."
     },
@@ -275,7 +286,7 @@
       "Name": "Michael Brown",
       "Email": "michael.brown@example.com",
       "Service": "Attestation",
-      "Location": "Al wakrah",
+      "Location": "Fahaheel",
       "Status": "Good",
       "Feedback_comment": "Smooth process, clear instructions."
     },
@@ -284,7 +295,7 @@
       "Name": "Sarah Jones",
       "Email": "sarah.jones@example.com",
       "Service": "Passport Renewal",
-      "Location": "Al khor",
+      "Location": "Jleeb Al Shuwaikh (Abbasiya)",
       "Status": "Excellent",
       "Feedback_comment": "Fast and efficient, highly recommended."
     },
@@ -293,7 +304,7 @@
       "Name": "Ahmed Hassan",
       "Email": "ahmed.hassan@example.com",
       "Service": "Visa Application",
-      "Location": "Bin omran",
+      "Location": "Kuwait City",
       "Status": "Average",
       "Feedback_comment": "Average service, could improve communication."
     },
@@ -302,7 +313,7 @@
       "Name": "Li Wei",
       "Email": "li.wei@example.com",
       "Service": "OCI Application",
-      "Location": "Al wakrah",
+      "Location": "Fahaheel",
       "Status": "Good",
       "Feedback_comment": "Good experience overall, staff was polite."
     },
@@ -311,7 +322,7 @@
       "Name": "Maria Garcia",
       "Email": "maria.garcia@example.com",
       "Service": "PCC",
-      "Location": "Al khor",
+      "Location": "Jleeb Al Shuwaikh (Abbasiya)",
       "Status": "Excellent",
       "Feedback_comment": "Very satisfied with the service."
     },
@@ -320,12 +331,11 @@
       "Name": "Raj Patel",
       "Email": "raj.patel@example.com",
       "Service": "Attestation",
-      "Location": "Bin omran",
+      "Location": "Jahra",
       "Status": "Good",
       "Feedback_comment": "Quick and hassle-free process."
     }
-],
-
+  ],
 
   "dashboard_data": {
     "Appointments": {
@@ -364,7 +374,7 @@
       { "name": "Passport", "value": 4 },
       { "name": "Attestation", "value": 1 }
     ],
-    "appointments": [
+   "appointments": [
     {
       "id": 1,
       "applicationNo": "C060325-0001",
@@ -372,7 +382,7 @@
       "service": "Passport",
       "appointmentDate": "15-02-2025",
       "status": "In progress",
-      "location": "Bin Omran",
+      "location": "Kuwait City",
       "fee": 200
     },
     {
@@ -382,7 +392,7 @@
       "service": "Passport",
       "appointmentDate": "09-03-2025",
       "status": "scheduled",
-      "location": "Al Wakrah",
+      "location": "Fahaheel",
       "fee": 200
     },
     {
@@ -392,7 +402,7 @@
       "service": "Passport",
       "appointmentDate": "10-03-2025",
       "status": "scheduled",
-      "location": "Al Khor",
+      "location": "Jleeb Al Shuwaikh (Abbasiya)",
       "fee": 200
     },
     {
@@ -402,7 +412,7 @@
       "service": "Passport",
       "appointmentDate": "11-03-2025",
       "status": "scheduled",
-      "location": "Bin Omran",
+      "location": "Jahra",
       "fee": 200
     },
     {
@@ -412,7 +422,7 @@
       "service": "Passport",
       "appointmentDate": "12-03-2025",
       "status": "scheduled",
-      "location": "Al Wakrah",
+      "location": "Kuwait City",
       "fee": 200
     },
     {
@@ -422,7 +432,7 @@
       "service": "Attestation",
       "appointmentDate": "13-03-2025",
       "status": "scheduled",
-      "location": "Al Khor",
+      "location": "Fahaheel",
       "fee": 150
     },
     {
@@ -432,7 +442,7 @@
       "service": "Passport",
       "appointmentDate": "14-03-2025",
       "status": "scheduled",
-      "location": "Bin Omran",
+      "location": "Jleeb Al Shuwaikh (Abbasiya)",
       "fee": 200
     },
     {
@@ -442,7 +452,7 @@
       "service": "Passport",
       "appointmentDate": "15-03-2025",
       "status": "scheduled",
-      "location": "Al Wakrah",
+      "location": "Jahra",
       "fee": 200
     },
     {
@@ -452,7 +462,7 @@
       "service": "Passport",
       "appointmentDate": "16-03-2025",
       "status": "scheduled",
-      "location": "Al Khor",
+      "location": "Kuwait City",
       "fee": 200
     },
     {
@@ -462,7 +472,7 @@
       "service": "Passport",
       "appointmentDate": "17-03-2025",
       "status": "scheduled",
-      "location": "Bin Omran",
+      "location": "Fahaheel",
       "fee": 200
     },
     {
@@ -472,7 +482,7 @@
       "service": "OCI",
       "appointmentDate": "18-03-2025",
       "status": "scheduled",
-      "location": "Al Wakrah",
+      "location": "Jleeb Al Shuwaikh (Abbasiya)",
       "fee": 150
     },
     {
@@ -482,7 +492,7 @@
       "service": "Passport",
       "appointmentDate": "19-03-2025",
       "status": "scheduled",
-      "location": "Al Khor",
+      "location": "Jahra",
       "fee": 200
     },
     {
@@ -492,47 +502,7 @@
       "service": "Passport",
       "appointmentDate": "20-03-2025",
       "status": "scheduled",
-      "location": "Bin Omran",
-      "fee": 200
-    },
-    {
-      "id": 14,
-      "applicationNo": "C060325-0007",
-      "fullName": "Raj Patel",
-      "service": "Passport",
-      "appointmentDate": "14-03-2025",
-      "status": "scheduled",
-      "location": "Al Wakrah",
-      "fee": 200
-    },
-    {
-      "id": 15,
-      "applicationNo": "K060325-0001",
-      "fullName": "Anil Kumar",
-      "service": "Passport",
-      "appointmentDate": "15-03-2025",
-      "status": "scheduled",
-      "location": "Al Khor",
-      "fee": 200
-    },
-    {
-      "id": 16,
-      "applicationNo": "K060325-0002",
-      "fullName": "Sajesh Keloth",
-      "service": "Passport",
-      "appointmentDate": "16-03-2025",
-      "status": "scheduled",
-      "location": "Bin Omran",
-      "fee": 200
-    },
-    {
-      "id": 17,
-      "applicationNo": "K060325-0003",
-      "fullName": "Anil Dev",
-      "service": "Passport",
-      "appointmentDate": "17-03-2025",
-      "status": "scheduled",
-      "location": "Al Wakrah",
+      "location": "Kuwait City",
       "fee": 200
     }
   ],

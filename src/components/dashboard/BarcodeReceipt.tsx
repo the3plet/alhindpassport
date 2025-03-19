@@ -12,7 +12,7 @@ const BarcodeReceipt = () => {
     mobileNo: "+91 8138832260",
     serviceName: "Visa Service",
     serviceSubtype: "Tourist Visa",
-    centerName: "Dubai Center",
+    centerName: "Kuwait City",
     checkInTime: "10:30 AM",
     paymentDateTime: "2025-03-13 14:45:00",
     consularFee: 100,

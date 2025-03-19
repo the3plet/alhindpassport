@@ -31,7 +31,7 @@ export default function ServiceCard({ service }: ServiceCardProps) {
       <div className="space-y-2">
         <div className="flex items-center text-gray-700">
           <Newspaper size={18} className="mr-2" />
-          <span>Fees: QAR {service.fees}</span>
+          <span>Fees: KWD {service.fees}</span>
         </div>
         <div className="flex items-center text-gray-700">
           <Clock size={18} className="mr-2" />
