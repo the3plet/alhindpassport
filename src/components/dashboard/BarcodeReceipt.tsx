@@ -15,11 +15,11 @@ const BarcodeReceipt = () => {
     centerName: "Kuwait City",
     checkInTime: "10:30 AM",
     paymentDateTime: "2025-03-13 14:46:00",
-    consularFee: 100,
-    consularSurcharge: 50,
-    serviceFee: 25,
-    taxes: 10,
-    bankCharges: 30,
+    consularFee: 30,
+    consularSurcharge: 10,
+    serviceFee: 2,
+    taxes: 1,
+    bankCharges: 3,
   };
 
   // Calculate totals

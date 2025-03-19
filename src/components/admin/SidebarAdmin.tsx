@@ -150,7 +150,7 @@ import { DropdownMenu, DropdownMenuTrigger } from "../ui/dropdown-menu";
                   <SidebarMenuButton>
                     <Home />
                     <button
-                      className="w-full flex justify-start"
+                      className="w-full flex justify-start cursor-pointer"
                       onClick={()=>{window.location.replace('/')
                       
                       }}
@@ -161,7 +161,7 @@ import { DropdownMenu, DropdownMenuTrigger } from "../ui/dropdown-menu";
                   <SidebarMenuButton>
                     <LogOut />
                     <button
-                      className="w-full flex justify-start"
+                      className="w-full flex justify-start cursor-pointer"
                       onClick={()=>{window.location.replace('/')
                         localStorage.removeItem("verified")
                       }}
