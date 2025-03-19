@@ -597,7 +597,7 @@
         "service": "Passport",
         "appointmentDate": "15-02-2025",
         "status": "In progress",
-        "location": "Kuwait City",
+        "location": "Riyadh-1",
         "fee": 200
       },
       {
@@ -607,7 +607,7 @@
         "service": "Passport",
         "appointmentDate": "09-03-2025",
         "status": "scheduled",
-        "location": "Fahaheel",
+        "location": "Riyadh-2",
         "fee": 200
       },
       {
@@ -617,7 +617,7 @@
         "service": "Passport",
         "appointmentDate": "10-03-2025",
         "status": "scheduled",
-        "location": "Jleeb Al Shuwaikh (Abbasiya)",
+        "location": "Al Khobar",
         "fee": 200
       },
       {
@@ -627,7 +627,7 @@
         "service": "Passport",
         "appointmentDate": "11-03-2025",
         "status": "scheduled",
-        "location": "Jahra",
+        "location": "Buraidah",
         "fee": 200
       },
       {
@@ -637,7 +637,7 @@
         "service": "Passport",
         "appointmentDate": "12-03-2025",
         "status": "scheduled",
-        "location": "Kuwait City",
+        "location": "Hail",
         "fee": 200
       },
       {
@@ -647,7 +647,7 @@
         "service": "Attestation",
         "appointmentDate": "13-03-2025",
         "status": "scheduled",
-        "location": "Fahaheel",
+        "location": "Jubail",
         "fee": 150
       },
       {
@@ -657,7 +657,7 @@
         "service": "Passport",
         "appointmentDate": "14-03-2025",
         "status": "scheduled",
-        "location": "Jleeb Al Shuwaikh (Abbasiya)",
+        "location": "Sakaka (Al Jouf)",
         "fee": 200
       },
       {
@@ -667,7 +667,7 @@
         "service": "Passport",
         "appointmentDate": "15-03-2025",
         "status": "scheduled",
-        "location": "Jahra",
+        "location": "Jeddah-1",
         "fee": 200
       },
       {
@@ -677,7 +677,7 @@
         "service": "Passport",
         "appointmentDate": "16-03-2025",
         "status": "scheduled",
-        "location": "Kuwait City",
+        "location": "Jeddah-2",
         "fee": 200
       },
       {
@@ -687,7 +687,7 @@
         "service": "Passport",
         "appointmentDate": "17-03-2025",
         "status": "scheduled",
-        "location": "Fahaheel",
+        "location": "Mecca",
         "fee": 200
       },
       {
@@ -697,7 +697,7 @@
         "service": "OCI",
         "appointmentDate": "18-03-2025",
         "status": "scheduled",
-        "location": "Jleeb Al Shuwaikh (Abbasiya)",
+        "location": "Abha/Khamis Mushait",
         "fee": 150
       },
       {
@@ -707,7 +707,7 @@
         "service": "Passport",
         "appointmentDate": "19-03-2025",
         "status": "scheduled",
-        "location": "Jahra",
+        "location": "Jazan",
         "fee": 200
       },
       {
@@ -717,7 +717,7 @@
         "service": "Passport",
         "appointmentDate": "20-03-2025",
         "status": "scheduled",
-        "location": "Kuwait City",
+        "location": "Najran",
         "fee": 200
       }
     ],
