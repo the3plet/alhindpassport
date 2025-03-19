@@ -14,7 +14,7 @@ const BarcodeReceipt = () => {
     serviceSubtype: "Tourist Visa",
     centerName: "Kuwait City",
     checkInTime: "10:30 AM",
-    paymentDateTime: "2025-03-13 14:45:00",
+    paymentDateTime: "2025-03-13 14:46:00",
     consularFee: 100,
     consularSurcharge: 50,
     serviceFee: 25,
