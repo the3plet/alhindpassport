@@ -188,7 +188,7 @@ const Home = () => {
                   <Phone className="w-6 h-6 text-blue-600 flex-shrink-0 " />
                   
                   <div>
-                    <p>Kuwait</p>
+                    <p>Riyadh</p>
                     <p className="text-gray-600">1800-258-1800</p>
                     <p className="text-gray-600">+91-44-2346-1800</p>
                   </div>
@@ -196,7 +196,7 @@ const Home = () => {
                 <div>
                   <h4 className="font-semibold mb-2">Support Hours</h4>
                   <p className="text-gray-600">
-                  Saturday to Friday 08:00 - 13:00, 14:00 - 19:00
+                  Saturday to Thursday 08:00 - 13:00, 14:00 - 18:00
                   </p>
                  
                 </div>

@@ -12,7 +12,7 @@ const BarcodeReceipt = () => {
     mobileNo: "+91 8138832260",
     serviceName: "Visa Service",
     serviceSubtype: "Tourist Visa",
-    centerName: "Kuwait City",
+    centerName: "Jubail",
     checkInTime: "10:30 AM",
     paymentDateTime: "2025-03-13 14:46:00",
     consularFee: 30,
@@ -78,27 +78,27 @@ const BarcodeReceipt = () => {
             <div className="mb-4">
               <h3 className="text-lg font-semibold">Payment Details</h3>
               <div className="flex justify-between">
-                <p><strong>Consular Fee:</strong> ₹{receiptData.consularFee}</p>
-                <p><strong>Consular Surcharge:</strong> ₹{receiptData.consularSurcharge}</p>
+                <p><strong>Consular Fee:</strong> SAR{receiptData.consularFee}</p>
+                <p><strong>Consular Surcharge:</strong> SAR{receiptData.consularSurcharge}</p>
               </div>
               <div className="flex justify-between font-bold">
                 <p>Total (I):</p>
-                <p>₹{totalI}</p>
+                <p>SAR{totalI}</p>
               </div>
               <div className="flex justify-between">
-                <p><strong>Service Fee:</strong> ₹{receiptData.serviceFee}</p>
-                <p><strong>Taxes:</strong> ₹{receiptData.taxes}</p>
+                <p><strong>Service Fee:</strong> SAR{receiptData.serviceFee}</p>
+                <p><strong>Taxes:</strong> SAR{receiptData.taxes}</p>
               </div>
               <div className="flex justify-between font-bold">
                 <p>Total (II):</p>
-                <p>₹{totalII}</p>
+                <p>SAR{totalII}</p>
               </div>
               <div className="flex justify-between">
-                <p><strong>Bank/Agency Charges:</strong> ₹{receiptData.bankCharges}</p>
+                <p><strong>Bank/Agency Charges:</strong> SAR{receiptData.bankCharges}</p>
               </div>
               <div className="border-t border-gray-300 pt-2 flex justify-between font-bold text-lg">
                 <p>Grand Total:</p>
-                <p>₹{grandTotal}</p>
+                <p>SAR{grandTotal}</p>
               </div>
             </div>
           </div>
